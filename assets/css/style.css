@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+body{
+    background-image: url("/assets//images/Dark-Space-Wallpapers-HD.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Serif', serif !important;
+    color: antiquewhite;    
+}
+#heading{
+    border-radius: 10px;
+    border: 10px solid red !important;
+}
+
+.collapse{
+    width: 100%;
+}
+
+input{
+    width: 150px !important;
+}
+
+canvas{
+    color: aliceblue;
+}
