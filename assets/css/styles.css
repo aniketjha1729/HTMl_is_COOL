@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+body{
+    background-image:url("../images/Background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Serif', serif !important;
+    color: antiquewhite;    
+}
+
+ .firstcolumn{
+            text-align: center;
+            /* border: 2px solid red;     */
+        }
+        
+        
+        .container{
+            text-align: center;
+            align-items: center;
+        }
+        select{
+            background-color: rgba(151, 160, 196, 0.4);
+            height: 100% !important;
+            width: 70%;
+            color: rgb(0, 0, 0);
+            font-size:large !important;
+
+        }
+        select option{
+            color: rgb(0, 0, 0);
+            font-size:large !important;
+            background-color: rgba(151, 160, 196, 0.4);
+        }
+       
+        @media screen and (max-width: 532px) {
+            
+            #to{
+                width: 100%;   
+            }
+            #from{
+                width: 100%;
+            }
+            #rocket{
+                width: 100%;
+            }
+            #payLoad{
+                width: 100%;
+            }
+            
+            #submit{
+                width: 100%;
+            }
+            img{
+                height: 100%;
+            }
+            #outputLevel5{
+                word-wrap: break-word;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            #to{
+                width: 60%;   
+            }
+            #from{
+                width: 60%;
+            }
+            #rocket{
+                width: 60%;
+            }
+            #payLoad{
+                width: 60%;
+            }
+            
+            #submit{
+                width: 60%;
+            }
+            img{
+                height: 400px !important;
+                margin-left: 15%;
+            }
+        }
