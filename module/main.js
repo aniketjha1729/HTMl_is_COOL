@@ -1,10 +1,10 @@
-var phi=document.getElementById("phi")
+var phi = document.getElementById("phi")
 var attempt = document.getElementById("attempt")
 var hoh = document.getElementById("hoh")
 var phif = document.getElementById("phif")
 var alphal = document.getElementById("alphal")
 var output = document.getElementById("output")
-var imagesource = document.getElementById("imagesource")
+// var imagesource = document.getElementById("imagesource")
 
 var Thoh = 18924.78042
 var Phif = 100.9191688
@@ -16,16 +16,17 @@ var omaga2rad = 0.00007293193628
 var phifrad = 1.761371774
 var phiirad=""
 
-window.onload = function () {
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    var img = document.getElementById("imagesource");
-    ctx.drawImage(img, 0, 0, 400, 360);
-    ctx.beginPath();
-    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-    ctx.strokeStyle = "white";
-    ctx.stroke();
-}
+// window.onload = function () {
+//     var c = document.getElementById("myCanvas");
+//     var ctx = c.getContext("2d");
+//     var img = document.getElementById("imagesource");
+//     ctx.drawImage(img, 0, 0, 400, 300);
+//     ctx.beginPath();
+//     ctx.arc(200, 150, 80, 0, 2 * Math.PI);
+//     ctx.arc(200, 150, 160, 0, 2 * Math.PI);
+//     ctx.strokeStyle = "white";
+//     ctx.stroke();
+// }
 
 
 window.fphi=(e)=>{  
@@ -54,7 +55,7 @@ window.fphi=(e)=>{
     }
     $("#attempt").prop("selectedIndex", 0);
     phi.style.setProperty('border', 'initial')
-    attempt.style.border = "solid Red";
+    
     hoh.value=Thoh;
     hoh.style.setProperty('border', 'initial')
     phif.value=Phif;
@@ -77,6 +78,14 @@ window.showResult=(e)=>{
     console.log("phidiff",phiirad - phifrad)
     console.log("deno",deno)
     var ans=(numerator/deno)/60
-    output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} minutes`;
+    if(ans<=60 && ans>0){
+        output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} minutes`;
+    }else if(ans>60){
+        output.innerHTML = `Oops! Its gone a take more than an hour ${ans} mins to inginte your engine for docking,
+        Tweek some values to start sooner`;
+    }else if(ans<0){
+        output.innerHTML = `Oh No!! Unfortunately you missed the chance to start docking at very 1st attempt. Please try again `;
+
+    }
 }
 

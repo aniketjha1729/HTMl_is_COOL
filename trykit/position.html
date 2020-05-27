@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+        }
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+        /* body{
+            background-image: url("./assets/images/Dark-Space-Wallpapers-HD.jpg");
+        } */
+        .maincontainer{
+            position: relative;
+        }
+        .centerimage{
+            width: 400px;
+            height: 400px;
+            
+        }
+        .inner{
+            position: absolute;
+            color: rgb(38, 118, 187);
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+        <!-- <h2>position: absolute;</h2> 
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of
+            positioned relative to the viewport, like fixed):</p>
+    
+        <div class="relative">This div element has position: relative;
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore laudantium ea voluptate, non fugiat ipsa? Rerum quos architecto excepturi temporibus corrupti, non amet odio ullam nisi dolore similique veniam dolor!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, harum temporibus asperiores, quaerat ex, expedita minus quasi odit at fuga eveniet explicabo iste blanditiis ut aut. Doloribus error recusandae vel?
+            <div class="absolute">This div element has position: absolute;</div>
+        </div> -->
+        <div class="maincontainer">
+                <img src="./assets/images/Earth.jpg" alt="" class="centerimage">
+                <div class="inner">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit necessitatibus corporis natus saepe a cupiditate quod voluptatem ea laudantium. Consequatur, nulla ipsum. Reprehenderit blanditiis ipsam perspiciatis dolor ducimus enim accusantium.
+            </div>
+        </div>
+</body>
+</html>
