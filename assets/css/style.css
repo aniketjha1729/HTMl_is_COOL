@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
 body{
-    background-image: url("/assets/images/Dark-Space-Wallpapers-HD.jpg");
+    background-image: url("../images/Dark-Space-Wallpapers-HD.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
