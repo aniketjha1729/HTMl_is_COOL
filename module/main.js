@@ -77,7 +77,7 @@ window.showResult=(e)=>{
     var deno = omega1rad - omaga2rad
     console.log("phidiff",phiirad - phifrad)
     console.log("deno",deno)
-    var ans=((numerator/deno)/60).toFixed(2)
+    var ans=parseFloat((numerator/deno)/60).toFixed(2)
     if(ans<=60 && ans>0){
         output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} minutes.`;
     }else if(ans>60){
