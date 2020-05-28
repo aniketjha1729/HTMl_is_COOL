@@ -77,14 +77,14 @@ window.showResult=(e)=>{
     var deno = omega1rad - omaga2rad
     console.log("phidiff",phiirad - phifrad)
     console.log("deno",deno)
-    var ans=(numerator/deno)/60
+    var ans=((numerator/deno)/60).toFixed(2)
     if(ans<=60 && ans>0){
-        output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} minutes`;
+        output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} minutes.`;
     }else if(ans>60){
         output.innerHTML = `Oops! Its gone a take more than an hour ${ans} mins to inginte your engine for docking,
-        Tweek some values to start sooner`;
+        Tweek some values to start sooner.`;
     }else if(ans<0){
-        output.innerHTML = `Oh No!! Unfortunately you missed the chance to start docking at very 1st attempt. Please try again `;
+        output.innerHTML = `Oh No!! Unfortunately you missed the chance to start docking at very 1st attempt. Please try again.`;
 
     }
 }
