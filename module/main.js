@@ -16,17 +16,17 @@ var omaga2rad = 0.00007293193628
 var phifrad = 1.761371774
 var phiirad=""
 
-// window.onload = function () {
-//     var c = document.getElementById("myCanvas");
-//     var ctx = c.getContext("2d");
-//     var img = document.getElementById("imagesource");
-//     ctx.drawImage(img, 0, 0, 400, 300);
-//     ctx.beginPath();
-//     ctx.arc(200, 150, 80, 0, 2 * Math.PI);
-//     ctx.arc(200, 150, 160, 0, 2 * Math.PI);
-//     ctx.strokeStyle = "white";
-//     ctx.stroke();
-// }
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var radius=100
+for(i=0;i<=1;i++){
+    ctx.beginPath();
+    ctx.arc(252, 225, radius, 0, 2 * Math.PI,false)
+    ctx.strokeStyle = "#FFFFFF";
+    ctx.stroke();
+    radius=radius+100
+}
 
 
 window.fphi=(e)=>{  
@@ -54,8 +54,8 @@ window.fphi=(e)=>{
         phiirad = 6.283185307
     }
     $("#attempt").prop("selectedIndex", 0);
+    attempt.style.border="2px solid red"
     phi.style.setProperty('border', 'initial')
-    
     hoh.value=Thoh;
     hoh.style.setProperty('border', 'initial')
     phif.value=Phif;

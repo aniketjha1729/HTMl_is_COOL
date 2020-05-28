@@ -94,7 +94,6 @@ canvas{
         right: 0;
         margin: auto;
         color: aliceblue;
-    /* transform: translate(-50%, -50%); */
     }
 img{
     width: 100%;
@@ -119,15 +118,23 @@ img{
     }
 select{
     border-radius: 10px;
-    background-color: rgba(59, 61, 68, 0.4);
+    background-color: rgba(59, 61, 68, 0.2);
     color: rgb(207, 203, 203);
     font-size:large !important;
     width:150px ;
 }
 option{
-    background-color: rgba(13, 23, 61, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     color: rgb(207, 203, 203);
     font-size:large !important;
+}
+.mycanvas{
+    position: absolute;
+    top:120px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 
@@ -172,6 +179,7 @@ option{
                 <div class="row">
                     <div class="col">
                 <select class="custom-select-lg" style="border: solid red;" id="attempt" onchange="fattmp(this)">                            <option selected>Attempt</option>
+                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -220,6 +228,9 @@ option{
         <div class="content">
             <img src="assets/images/Earth.png" alt="">
         </div>
+        <canvas class="mycanvas" id="myCanvas" width="500px" height="450px">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+
         <img src="assets/images/Docking_spacecraft.png" alt="" class="smile" style="height: 50px; width: 50px;">
         <img src="assets/images/Target satellite (1).png" alt="" class="smile1" style="height: 100px; width: 100px;">
     </div>
