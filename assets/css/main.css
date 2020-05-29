@@ -26,24 +26,24 @@ canvas{
 @keyframes rot {
         from {
             transform: rotate(0deg)
-                    translate(-100px)
+                    translate(-130px)
                     rotate(0deg);
         }
         to {
             transform: rotate(360deg)
-                    translate(-100px) 
+                    translate(-130px) 
                     rotate(-360deg);
         }
     }
     @keyframes rot1 {
         from {
             transform: rotate(0deg)
-                    translate(-200px)
+                    translate(-250px)
                     rotate(0deg);
         }
         to {
             transform: rotate(360deg)
-                    translate(-200px) 
+                    translate(-250px) 
                     rotate(-360deg);
         }
     }
@@ -70,6 +70,19 @@ canvas{
     margin: auto;
 	font-size: 100px;
 	animation: rot1 10s infinite linear;
+}
+.smile3 {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+    top:115px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	font-size: 100px;
+	transform: translate(-250px) 
+                    
 }
 .content{
         width: 100px;
@@ -117,9 +130,20 @@ option{
 }
 .mycanvas{
     position: absolute;
-    top:120px;
+    top:100px;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+   
+}
+
+button{
+    width: 150px;
+}
+
+h1{
+    
+    font-size: 50px !important ;
+    color: red;
 }

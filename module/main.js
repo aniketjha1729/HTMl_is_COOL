@@ -19,15 +19,22 @@ var phiirad=""
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var radius=100
+var radius=130
 for(i=0;i<=1;i++){
     ctx.beginPath();
-    ctx.arc(252, 225, radius, 0, 2 * Math.PI,false)
+    ctx.arc(275, 263, radius, 0, 2 * Math.PI,false)
     ctx.strokeStyle = "#FFFFFF";
+    ctx.lineWidth = 4;
     ctx.stroke();
-    radius=radius+100
+    radius=radius+119
 }
-
+ctx.beginPath();
+ctx.arc(215, 270, 190, 0, 1. * Math.PI, true)
+ctx.strokeStyle = "#FFFF00";
+ctx.lineWidth = 3;
+ctx.setLineDash([5, 3]);
+ctx.stroke();
+radius = radius + 122
 
 window.fphi=(e)=>{  
     if(e.value=="5"){
