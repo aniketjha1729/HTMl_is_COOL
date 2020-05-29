@@ -4,39 +4,39 @@ var hoh = document.getElementById("hoh")
 var phif = document.getElementById("phif")
 var alphal = document.getElementById("alphal")
 var output = document.getElementById("output")
+var inner = document.getElementById("inner")
+var outer = document.getElementById("outer")
+var canvas1=document.getElementById("myCanvas")
+var canvas2=document.getElementById("myCanvas1")
 // var imagesource = document.getElementById("imagesource")
 
 var Thoh = 18924.78042
 var Phif = 100.9191688
 var AlphaL = 79.08083116
 var k=""
-
+var buttonVal=0;
 var omega1rad = 0.00118555196
 var omaga2rad = 0.00007293193628
 var phifrad = 1.761371774
 var phiirad=""
 
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+var ctx1 = canvas1.getContext("2d");
 var radius=130
 for(i=0;i<=1;i++){
-    ctx.beginPath();
-    ctx.arc(275, 263, radius, 0, 2 * Math.PI,false)
-    ctx.strokeStyle = "#FFFFFF";
-    ctx.lineWidth = 4;
-    ctx.stroke();
+    ctx1.beginPath();
+    ctx1.arc(275, 263, radius, 0, 2 * Math.PI,false)
+    ctx1.strokeStyle = "#FFFFFF";
+    ctx1.lineWidth = 4;
+    ctx1.stroke();
     radius=radius+119
 }
-ctx.beginPath();
-ctx.arc(215, 270, 190, 0, 1. * Math.PI, true)
-ctx.strokeStyle = "#FFFF00";
-ctx.lineWidth = 3;
-ctx.setLineDash([5, 3]);
-ctx.stroke();
-radius = radius + 122
+
 
 window.fphi=(e)=>{  
+    if(buttonVal==1){
+        console.log("kgkghgjhgg")
+    canvas2.style.display="none"}
     if(e.value=="5"){
         phiirad = 0.0872664626
     }else if(e.value=="10"){
@@ -70,15 +70,37 @@ window.fphi=(e)=>{
     alphal.value=AlphaL;
     alphal.style.setProperty('border', 'initial')
     output.innerHTML = "";
+    canvas2.style.display="none";
+
 }
 
 window.fattmp=(e)=>{
+    if (buttonVal == 1) {
+        canvas2.style.display = "none"
+    }
     k=attempt.value
     attempt.style.setProperty('border', 'initial')
     output.innerHTML="";
+    canvas2.style.display = "none";
 }
 
 window.showResult=(e)=>{
+    buttonVal=1;
+    canvas2.style.display = "block"
+    // inner.style.transform = "translate(60px,130px)";
+    inner.style.animationPlayState = "paused";
+    // inner.style.marginLeft="300px";    
+    outer.style.animationPlayState = "paused";
+    inner.style.transform = "translate(130px)";
+    var ctx2 = canvas2.getContext("2d");
+    ctx2.beginPath();
+    ctx2.arc(215, 270, 190, 0, 1. * Math.PI, true)
+    
+    ctx2.strokeStyle = "#FFFF00";
+    ctx2.lineWidth = 3;
+    ctx2.setLineDash([5, 3]);
+    ctx2.stroke();
+    radius = radius + 122
     console.log("phirad phifrad attempt omega1rad omega2rad",phiirad,phifrad,k,omega1rad,omaga2rad)
     var numerator = (phiirad - phifrad)+(2*k*3.14)
     var deno = omega1rad - omaga2rad

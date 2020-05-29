@@ -9,8 +9,34 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="assets/images/Logo.jpeg" type="image/x-icon">
-    <script src="https://use.fontawesome.com/ef4409f806.js"></script>
+    <!-- <script src="https://use.fontawesome.com/ef4409f806.js"></script> -->
     <title>Space Science</title>
+    <style>
+        @keyframes rot {
+        from {
+            transform: rotate(360deg)
+                    translate(-130px)
+                    rotate(-360deg);
+        }
+        to {
+            transform: rotate(0deg)
+                    translate(-130px) 
+                    rotate(0deg);
+        }
+    }
+    @keyframes rot1 {
+        from {
+            transform: rotate(360deg)
+                    translate(-250px)
+                    rotate(-360deg);
+        }
+        to {
+            transform: rotate(0deg)
+                    translate(-250px) 
+                    rotate(0deg);
+        }
+    }
+    </style>
 </head>
 <body>
     <div class="row rocketTitle">
@@ -23,7 +49,7 @@
                 Choose an initial angle between the two spacecraft to see
                 how long must the interceptor wait before starting the
                 rendezvous?  
-            </h>
+            </h4>
         </div>
     </div>
     <br><br>
@@ -62,7 +88,7 @@
                     <div class="col">
                         <h4>T <sub>hoh</sub>&nbsp;(s)</h4>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="hoh" style="border: solid red;" onchange="writeThis1(this)">
+                            <input type="text" class="form-control" id="hoh" style="border: solid red;">
                         </div>
                     </div>
                 </div><br>
@@ -98,14 +124,15 @@
                 </div>
            </div>
        </div>
-       
         <div class="content">
             <img src="assets/images/Earth.png" alt="">
         </div>
         <canvas class="mycanvas" id="myCanvas" width="550px" height="515px">
             Your browser does not support the HTML5 canvas tag.</canvas>
-        <img src="assets/images/Docking_spacecraft.png" alt="" class="smile" style="height: 70px; width: 70px;">
-        <img src="assets/images/Target satellite (1).png" alt="" class="smile1" style="height: 140px; width: 140px;">
+        <canvas class="mycanvas1" id="myCanvas1" width="550px" height="515px">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        <img src="assets/images/Docking_spacecraft.png" alt="" id="inner" class="smile" style="height: 70px; width: 70px;">
+        <img src="assets/images/Target satellite (1).png" alt="" id="outer" class="smile1" style="height: 140px; width: 140px;">
         <h1 class="smile3"> &#x2716; </h1>
     </div>
     <script src="module/main.js"></script>
