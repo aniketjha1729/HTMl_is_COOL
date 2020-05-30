@@ -37,7 +37,10 @@ for(i=0;i<=1;i++){
 
 window.fphi=(e)=>{  
     if(buttonVal==1){
-        inner.style.animation = "rot 4s infinite linear";
+        innertemp.style.display = "none";
+        inner.style.display = "block";
+        outertemp.style.display = "none";
+        outer.style.display = "block"
         canvas2.style.display="none"}
     if(e.value=="5"){
         phiirad = 0.0872664626
@@ -89,8 +92,7 @@ window.fattmp=(e)=>{
 window.showResult=(e)=>{
     buttonVal=1;
     canvas2.style.display = "block"
-    inner.style.animationPlayState = "paused";    
-    outer.style.animationPlayState = "paused";
+    
     innertemp.style.display="block";
     inner.style.display="none";
     outertemp.style.display="block";
