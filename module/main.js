@@ -119,10 +119,10 @@ window.showResult=(e)=>{
             ctx2.lineWidth = 3;
             ctx2.setLineDash([5, 3]);
             ctx2.stroke();
-            output.innerHTML=`Well Done! Get Ready to fire your engine in ${ans} min to meet the satelite in GEO at the marked point.`;
+            output.innerHTML=`Well Done! Get ready to fire your engine in ${ans} min to meet the satelite in GEO at the marked point.`;
         }else if(ans>60){
-            output.innerHTML = `Oops! Its Gonna take more than an hour i.e around ${ans} mins to ignite your engine for docking.
-            Change the attempt number to start sooner.`;
+            output.innerHTML = `Oops! Its gonna take more than an hour i.e around ${ans} mins to ignite your engine for docking.
+            Tweek some values to start sooner.`;
         }else if(ans<0){
             output.innerHTML = `Oh No!! Unfortunately you missed the chance to start docking at very 1st attempt. Please try again.`;
         }
