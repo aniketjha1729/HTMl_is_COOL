@@ -8,6 +8,8 @@ var inner = document.getElementById("inner")
 var outer = document.getElementById("outer")
 var canvas1=document.getElementById("myCanvas")
 var canvas2=document.getElementById("myCanvas1")
+var innertemp = document.getElementById("innertemp")
+var outertemp = document.getElementById("outertemp")
 // var imagesource = document.getElementById("imagesource")
 
 var Thoh = 18924.78042
@@ -35,8 +37,8 @@ for(i=0;i<=1;i++){
 
 window.fphi=(e)=>{  
     if(buttonVal==1){
-        console.log("kgkghgjhgg")
-    canvas2.style.display="none"}
+        inner.style.animation = "rot 4s infinite linear";
+        canvas2.style.display="none"}
     if(e.value=="5"){
         phiirad = 0.0872664626
     }else if(e.value=="10"){
@@ -87,11 +89,12 @@ window.fattmp=(e)=>{
 window.showResult=(e)=>{
     buttonVal=1;
     canvas2.style.display = "block"
-    // inner.style.transform = "translate(60px,130px)";
-    inner.style.animationPlayState = "paused";
-    // inner.style.marginLeft="300px";    
+    inner.style.animationPlayState = "paused";    
     outer.style.animationPlayState = "paused";
-    inner.style.transform = "translate(130px)";
+    innertemp.style.display="block";
+    inner.style.display="none";
+    outertemp.style.display="block";
+    outer.style.display="none"
     var ctx2 = canvas2.getContext("2d");
     ctx2.beginPath();
     ctx2.arc(215, 270, 190, 0, 1. * Math.PI, true)

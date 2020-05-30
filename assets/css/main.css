@@ -34,11 +34,23 @@ canvas{
     left: 0;
     right: 0;
     margin: auto;
-	font-size: 100px;
+    font-size: 100px;
+    display: block;
     animation: rot 4s infinite linear; 
-    /* transform: rotate(360deg)
-                    translate(-30px,130px)
-                    rotate(-360deg); */
+}
+.smiletemp{
+    width: 40px;
+	height: 40px;
+	position: absolute;
+    top:120px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 100px;
+    display: none;
+    transform: translate(130px)
+     
 }
 .smile1 {
 	width: 40px;
@@ -51,6 +63,19 @@ canvas{
     margin: auto;
 	font-size: 100px;
 	animation: rot1 10s infinite linear;
+}
+.smile1temp{
+    width: 40px;
+	height: 40px;
+	position: absolute;
+    top:120px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 100px;
+    display: none;
+    transform: translate(-250px)
 }
 .smile3 {
 	width: 40px;
