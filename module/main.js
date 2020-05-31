@@ -84,6 +84,12 @@ window.fphi=(e)=>{
 window.fattmp=(e)=>{
     if (buttonVal == 1) {
         canvas2.style.display = "none"
+        innertemp.style.display = "none";
+        inner.style.display = "block";
+        outertemp.style.display = "none";
+        outer.style.display = "block"
+        redcross.style.display = "none"
+        canvas2.style.display = "none"
     }
     flag=1;
     k=attempt.value
