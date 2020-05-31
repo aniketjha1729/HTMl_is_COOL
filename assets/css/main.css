@@ -106,6 +106,11 @@ img{
     width: 100%;
     height: 100%;
 }
+.smile9{
+    width: 100%;
+    height: 100%;
+    animation: rot9 50s infinite linear;  
+}
     
 .heading{
     text-align: center;    
