@@ -9,6 +9,7 @@ body{
 }
 .content{
     font-family: 'Sriracha', cursive;
+    text-align: center;
 }
 @media screen and (max-width: 800px) {
     .heading{
@@ -32,25 +33,25 @@ body{
         margin-left: 25%;
     }
     .section1{
-        background-color: rgb(216, 192, 86);
+        background-color: rgb(216, 190, 70);
     }
     .section2{
         background-color: rgb(209, 173, 55);
     }   
     .section3{
-        background-color: rgb(216, 192, 86);
+        background-color: rgb(216, 190, 70);
     }
     .section4{
         background-color: rgb(209, 173, 55)
     }
     .section5{
-        background-color: rgb(216, 192, 86);
+        background-color: rgb(216, 190, 70);
     }
     .section6{
         background-color: rgb(209, 173, 55);
     }
     .section7{
-        background-color: rgb(216, 192, 86);
+        background-color: rgb(216, 190, 70);
     }
     h2{
         font-weight: bold;

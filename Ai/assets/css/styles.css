@@ -29,25 +29,25 @@ body{
         margin-left: 25%;
     }
     .section1{
-        background-color: rgb(207, 172, 12);
+        background-color: rgb(92, 160, 182);
     }
     .section2{
-        background-color: rgb(168, 175, 180);
+        background-color: rgb(83, 145, 182);
     }   
     .section3{
-        background-color: rgb(144, 156, 156);
+        background-color: rgb(92, 160, 182);
     }
     .section4{
-        background-color: rgb(95, 145, 145);
+        background-color: rgb(83, 145, 182)
     }
     .section5{
-        background-color: rgb(147, 238, 238);
+        background-color: rgb(92, 160, 182);
     }
     .section6{
-        background-color: rgb(161, 157, 207);
+        background-color: rgb(83, 145, 182);
     }
     .section7{
-        background-color: rgb(235, 147, 238);
+        background-color: rgb(92, 160, 182);
     }
 }
 .heading1{
