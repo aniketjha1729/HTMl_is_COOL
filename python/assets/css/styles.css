@@ -2,8 +2,9 @@ body{
     background-color: rgb(83, 145, 182);
 }
 .heading{
-    font-size: 100px;
+    font-size: 70px;
     text-align: center;
+    font-family: 'Berkshire Swash', cursive;
 }
 @media screen and (max-width: 800px) {
     .heading{
@@ -49,11 +50,12 @@ body{
     }
 }
 .heading1{
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
+    font-family: 'Berkshire Swash', cursive;
 }
-.maincontent{
-    text-align: center;
+.content{
+    font-family: 'Sriracha', cursive;
 }
 .tb{
     border: 2px solid red;
