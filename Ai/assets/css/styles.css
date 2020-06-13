@@ -1,0 +1,116 @@
+body{
+    background-color: rgb(83, 145, 182);
+}
+.heading{
+    font-size: 100px;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .heading{
+        font-size: 40px;
+        text-align: center;
+    }
+    .heading1{
+        font-size: 30px !important;
+        text-align: center;
+    }
+    .line{
+        display: none;
+    }
+    .linebranch{
+        display: none;
+    }
+    .linecol{
+        display: none;
+    }
+    .smallsc{
+        margin-left: 25%;
+    }
+    .section1{
+        background-color: rgb(207, 172, 12);
+    }
+    .section2{
+        background-color: rgb(168, 175, 180);
+    }   
+    .section3{
+        background-color: rgb(144, 156, 156);
+    }
+    .section4{
+        background-color: rgb(95, 145, 145);
+    }
+    .section5{
+        background-color: rgb(147, 238, 238);
+    }
+    .section6{
+        background-color: rgb(161, 157, 207);
+    }
+    .section7{
+        background-color: rgb(235, 147, 238);
+    }
+}
+.heading1{
+    font-size: 70px;
+    text-align: center;
+}
+.maincontent{
+    text-align: center;
+}
+.tb{
+    border: 2px solid red;
+}
+.line{
+    height: 260px;
+    width: 20px;
+    background-color: brown;
+    margin-left: 50%;
+}
+.dashLine{
+    border-top: 10px dashed red;
+}
+.branch1{
+    height: 150px;
+    width: 20px;
+    background-color: brown;
+    margin-left: 50%;
+}
+.branch2{
+    height: 150px;
+    width: 20px;
+    background-color: brown;
+    margin-left: 56%;
+}
+.branch3{
+    height: 150px;
+    width: 20px;
+    background-color: brown;
+    margin-left: 42%;
+}
+.linebranch{
+    height: 280px;
+    width: 20px;
+    background-color: brown;
+    margin-left: 50%;
+}
+.linecol{
+    width: 100%;
+}
+.branchcontent1{
+    text-align: center;
+}
+.branchcontent2{
+    text-align: center;
+}
+.brachlast{
+    margin-left: 15%;
+}
+
+.col-md-5{
+    text-align: center;
+}
+.col-md-6{
+    text-align: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
