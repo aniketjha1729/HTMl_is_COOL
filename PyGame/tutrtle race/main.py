@@ -65,31 +65,47 @@ while(times>0):
         winneblack=0
         winnerorange=0
 
+        redTotal=0
+        blueTotal=0
+        blackTotal=0
+        orangeTotal=0
+
         for turn in range(50):
             winnerred=randint(1,10);
             red.forward(winnerred)
+
             winnerblue=randint(1,10)
             blue.forward(winnerblue)
+
             winneblack=randint(1,10)
             black.forward(winneblack)
+
             winnerorange=randint(1,10)
             orange.forward(winnerorange)
 
-        # print((winnerred,winnerblue,winneblack,winnerorange))
+            redTotal=redTotal+winnerred
+            blueTotal=blueTotal+winnerblue
+            blackTotal=blackTotal+winneblack
+            orangeTotal=orangeTotal+winnerorange
+
+            # print(winnerred,winnerblue,winneblack,winnerorange)
+            # print(redTotal,blueTotal,blackTotal,orangeTotal)
+            # a=int(input())
         winner=""
-        if(winnerred>=winnerblue and winnerred>=winneblack and winnerred>=winnerorange):
+        if(redTotal>=blueTotal and redTotal>=blackTotal and redTotal>=orangeTotal):
             winner="red"
-        elif (winnerblue>=winnerred and winnerblue>=winneblack and winnerblue>=winnerorange):
+        elif (blueTotal>=redTotal and blueTotal>=blackTotal and blueTotal>=orangeTotal):
             winner="blue"
-        elif (winneblack>=winnerred and winneblack>=winnerblue and winneblack>=winnerorange):
+        elif (blackTotal>=redTotal and blackTotal>=blueTotal and blackTotal>=orangeTotal):
             winner="green"
-        elif (winnerorange>=winnerred and winnerorange>=winneblack and winnerorange>=winnerblue):
+        elif (orangeTotal>=redTotal and orangeTotal>=blackTotal and orangeTotal>=blueTotal):
             winner="orange"
         if(bet==winner):
             print("Congratulation! You Win")
             score=score+1
         else:
             print("Sorry! You Loose")
+        
     else:
         exit()
     times=times-1
