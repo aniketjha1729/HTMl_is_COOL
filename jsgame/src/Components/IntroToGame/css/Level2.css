@@ -10,6 +10,12 @@ body{
     width: 100px;
     height: 100px;
 }
+.blockb{
+    border-radius: 10px;
+    background-color: rgb(106, 142, 240);
+    width: 100px;
+    height: 100px;
+}
 .afterblocks{
     border-radius: 10px;
     background-color: rgb(98,231,98);
@@ -44,10 +50,10 @@ body{
         }
 .codes{
     border-collapse: separate;
-    border-spacing: 20px;
+    border-spacing: 15px;
     margin: auto;
     color: rgb(83, 83, 235);
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Orbitron', sans-serif;
 }
 

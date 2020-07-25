@@ -1,26 +1,34 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import "./css/Level1.css";
 export default function Level1() {
-    var move=0
+    const [move,setMove] = useState(0)
+    useEffect(() => {
+    }, [move])
+
+    
     function f1(e){
-        if(e.target.id==="one")
-        console.log("First Step Correct")
-        move++
+        if(e.target.id==="one" && move===0){
+            setMove(move+1)
+            console.log(move)
+        }  
     };
     const f2=(e)=>{
         if (move >= 1 && (e.target.id === "two" || e.target.id === "three" || e.target.id === "four" || e.target.id === "five")){
             if (move === 1 && e.target.id === "two") {
-                move++
                 console.log("second")
+                setMove(move+1)
             } else if (move === 2 && e.target.id === "four") {
-                move++
+        
                 console.log("third")
+                setMove(move+1)
             } else if (move === 3 && e.target.id === "three") {
-                move++
+                
                 console.log("forth")
+                setMove(move+1)
             } else if (move === 4 && e.target.id === "five") {
-                move++
+                
                 console.log("fifth")
+                setMove(move+1)
             } else {
                 console.log("wrong Path")
             }
@@ -31,6 +39,12 @@ export default function Level1() {
 
     return (
         <div>
+            <audio id="rightAns">
+                <source src="wrong1.mp3" type="audio/ogg"/>
+             </audio>
+                <audio id="wrongAns">
+                    <source src="right1.mp3" type="audio/ogg"/>
+            </audio>
             <div id="myid" className="container">
                 <br/><br/>
                 <div className="row">
@@ -38,6 +52,7 @@ export default function Level1() {
                         <div className="blockgame">
                             <div className="container">
                                 <table className="blocks">
+                                <tbody>
                                     <tr>
                                         <td className="block" onClick={f1} id="one">
                                             <div className="blink" id="blink"></div>
@@ -52,6 +67,7 @@ export default function Level1() {
                                         <td className="block" id="five" onClick={f2}></td>
                                         <td className="block" id="six" onClick={f2}></td>
                                     </tr>
+                                </tbody>
                                 </table>
                             </div>
                         </div>
@@ -60,6 +76,7 @@ export default function Level1() {
                         <div>
                             <div className="container">
                                 <table className="codes">
+                                <tbody>
                                     <tr>
                                         <td className="code"><b>right()</b></td>
                                     </tr>
@@ -72,13 +89,16 @@ export default function Level1() {
                                     <tr>
                                         <td className="code"><b>down()</b></td>
                                     </tr>
+                                    <tr>
+                                        <td className="code"><b>Score:{move}</b></td>
+                                    </tr>
+                                </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div><br/><br/>
-            </div>
-           
+            </div>  
         </div>
     )
 }
