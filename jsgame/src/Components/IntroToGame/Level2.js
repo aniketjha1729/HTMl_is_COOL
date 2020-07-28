@@ -1,44 +1,67 @@
 import React, { useEffect, useState } from 'react'
 import "./css/Level2.css";
+//import {howler} from "howler"
+import useSound from "use-sound";
+import right from "./audio/right1.mp3"
+import wrong from "./audio/wrong1.mp3"
+import swal from "sweetalert";  
 
 export default function Level2() {
     const [move, setMove] = useState(0)
-    
-    useEffect(() => {
-    }, [move])
+    const [rightActive] = useSound(right);
+    const [wrongActive] = useSound(wrong);
+    // useEffect(() => {
+    // }, [move])
+    // const soundPlay=()=>{
+    //     const sound=new howler({
+    //         src,
+    //         html5:true
+    //     })
+    //     sound.play()
+    // }
 
     const f1=(e)=>{
-        if (e.target.id === "thirteen" && (move===0||move===4)) {
+        if (e.target.id === "forteen" && (move===0||move===2||move===4)) {
             setMove(move + 1)
             console.log(move)
+            rightActive()
         }
     }
     const f2=(e)=>{
         if (move >= 1 &&
-            (e.target.id === "two" || e.target.id === "three" || e.target.id === "eight" || e.target.id === "forteen" || e.target.id ==="twenty")) {
-            if ((move === 1||move===3||move==5) && e.target.id === "forteen") {
-                console.log("forteen")
+            (e.target.id === "two" || e.target.id === "three" || e.target.id === "eight" || e.target.id === "thirteen" || e.target.id ==="twenty")) {
+            if ((move === 1 || move === 3) && e.target.id === "thirteen") {
+                console.log("thirteen")
                 setMove(move + 1)
-            } else if (move === 2 && e.target.id === "twenty") {
+                rightActive();
+            } else if (move === 1 && e.target.id === "twenty") {
                 console.log("twenty")
                 setMove(move + 1)
-            } else if (move === 6 && e.target.id === "eight") {
-
+                rightActive();
+            } else if (move === 5 && e.target.id === "eight") {
                 console.log("eight")
                 setMove(move + 1)
-            } else if (move === 7 && e.target.id === "two") {
-
+                rightActive();
+            } else if (move === 6 && e.target.id === "two") {
                 console.log("two")
                 setMove(move + 1)
-            } else if (move === 8 && e.target.id === "three") {
-
+                rightActive();
+            } else if (move === 7 && e.target.id === "three") {
                 console.log("three")
                 setMove(move + 1)
+                rightActive();
+                swal("Good job!", " ", "success");
+                
             }else {
                 console.log("wrong Path")
+                wrongActive()
+                setMove(0)
+                swal("Wrong Path!", "Start Again!", "warning");
             }
         } else {
             console.log("start form first")
+            wrongActive();
+            swal("Wrong Path!", "Plaese Start From beginning!", "warning");
         }
     }
     return (
@@ -53,26 +76,32 @@ export default function Level2() {
                                     <tbody>
                                         <tr>
                                             <td className="block" id="one" onClick={f2}></td>
-                                            <td className="blockb" id="two" onClick={f2}></td>
-                                            <td className="blockb" id="three" onClick={f2}></td>
+                                            <td className="blockb" id="two" onClick={f2}>
+                                                {move === 7? <div className="blink" id="blink"></div> : ''}
+                                            </td>
+                                            <td className="blockb" id="three" onClick={f2}>
+                                                {move === 8? <div className="blink" id="blink"></div> : ''}
+                                            </td>
                                             <td className="block" id="four" onClick={f2}></td>
                                             <td className="block" id="five" onClick={f2}></td>
                                             <td className="block" id="six" onClick={f2}></td>
                                         </tr>
                                         <tr>
                                             <td className="block" id="seven" onClick={f2}></td>
-                                            <td className="blockb" id="eight" onClick={f2}></td>
+                                            <td className="blockb" id="eight" onClick={f2}>
+                                                {move === 6 ? <div className="blink" id="blink"></div> : ''}
+                                            </td>
                                             <td className="block" id="nine" onClick={f2}></td>
                                             <td className="block" id="ten" onClick={f2}></td>
                                             <td className="block" id="eleven" onClick={f2}></td>
                                             <td className="block" id="twelve" onClick={f2}></td>
                                         </tr>
                                         <tr>
-                                            <td className="blockb" id="thirteen" onClick={f1}>
-                                                {move == 0 ? <div className="blink" id="blink"></div> : ''}
+                                            <td className="blockb" id="thirteen" onClick={f2}>
+                                                {move === 0||move===4 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className="blockb" id="forteen" onClick={f2}>
-                                                {move == 1 ? <div className="blink" id="blink"></div>:''}
+                                            <td className="blockb" id="forteen" onClick={f1}>
+                                                {move === 1||move===3||move===5? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="block" id="fifteen" onClick={f2}></td>
                                             <td className="block" id="sixteen" onClick={f2}></td>
@@ -81,7 +110,9 @@ export default function Level2() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="nineteen" onClick={f2}></td>
-                                            <td className="blockb" id="twenty" onClick={f2}></td>
+                                            <td className="blockb" id="twenty" onClick={f2}>
+                                                {move === 2 ? <div className="blink" id="blink"></div> : ''}
+                                            </td>
                                             <td className="block" id="twentyone" onClick={f2}></td>
                                             <td className="block" id="twentytwo" onClick={f2}></td>
                                             <td className="block" id="twentythree" onClick={f2}></td>
@@ -98,38 +129,38 @@ export default function Level2() {
                                 <table className="codes">
                                     <tbody>
                                         <tr>
-                                            <td className="code"><b>right()</b></td>
+                                            <td className="score"><b>Score:{move}</b></td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>down()</b></td>
+                                            {move === 0 ? <td className="codec"><b>right()</b></td> : <td className="code"><b>right()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>up()</b></td>
+                                            {move === 1? <td className="codec"><b>down()</b></td> : <td className="code"><b>down()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>left()</b></td>
+                                            {move === 2 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>up()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>right()</b></td>
+                                            {move === 3 ? <td className="codec"><b>left()</b></td> : <td className="code"><b>left()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>up()</b></td>
+                                            {move === 4 ? <td className="codec"><b>right()</b></td> : <td className="code"><b>right()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>up()</b></td>
+                                            {move === 5 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>up()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>left()</b></td>
+                                            {move === 6 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>up()</b></td>}
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>Score:{move}</b></td>
+                                            {move === 7 ? <td className="codec"><b>left()</b></td> : <td className="code"><b>left()</b></td>}
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div><br/>
+                </div>
                 <div className="footer">
                     Click on square blocks as per instructions given on right side.
                  </div>
