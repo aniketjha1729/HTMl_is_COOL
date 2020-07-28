@@ -9,8 +9,8 @@ class App extends Component {
     return (
       // <Level1/>
       // <Level2/>
-      // <Level7/>
-      <Welcome/>
+      <Level7/>
+      // <Welcome/>
       
     );
   }
