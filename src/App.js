@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import Level1 from './Components/IntroToGame/Level1';
-import Level2 from './Components/IntroToGame/Level2';
-import Level7 from "./Components/ForLoop/Level7"
+import React from 'react';
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import Welcome from './Components/Base/Welcome';
+import IntroToGame from './Components/IntroToGame/IntroToGame';
+import Level1 from "./Components/IntroToGame/Levels/Level1"
+import Level2 from './Components/IntroToGame/Levels/Level2';
 
-class App extends Component {
-  render() {
-    return (
-      // <Level1/>
-      // <Level2/>
-      <Level7/>
-      // <Welcome/>
-      
-    );
-  }
+
+
+
+
+
+
+export default function App() {
+  return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" exact component={Welcome} />
+          <Route exact path="/introtogame" exact component={IntroToGame}/>
+          <Route exact path="/introtogamelevel1" exact component={Level1} />
+          <Route exact path="/introtogamelevel2" exact component={Level2} />
+        </Switch>
+      </BrowserRouter>
+  )
 }
-
-export default App;

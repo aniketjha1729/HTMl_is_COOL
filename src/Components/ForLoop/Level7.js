@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./css/Level7.css";
-//import {howler} from "howler"
+
 import useSound from "use-sound";
 import right from "./audio/right1.mp3"
 import wrong from "./audio/wrong1.mp3"
@@ -10,16 +10,7 @@ export default function Level2() {
     const [move, setMove] = useState(0)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
-    // useEffect(() => {
-    // }, [move])
-    // const soundPlay=()=>{
-    //     const sound=new howler({
-    //         src,
-    //         html5:true
-    //     })
-    //     sound.play()
-    // }
-
+    
     const f1 = (e) => {
         if (e.target.id === "five" && (move === 0)) {
             setMove(move + 1)

@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import "./css/Level2.css";
-//import {howler} from "howler"
+import React, {useState } from 'react'
+import "../css/Level2.css"
 import useSound from "use-sound";
-import right from "./audio/right1.mp3"
-import wrong from "./audio/wrong1.mp3"
+import right from '../audio/right1.mp3'
+import wrong from '../audio/wrong1.mp3'
 import swal from "sweetalert";  
 
 export default function Level2() {
     const [move, setMove] = useState(0)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
-    // useEffect(() => {
-    // }, [move])
-    // const soundPlay=()=>{
-    //     const sound=new howler({
-    //         src,
-    //         html5:true
-    //     })
-    //     sound.play()
-    // }
-
+    
     const f1=(e)=>{
         if (e.target.id === "forteen" && (move===0||move===2||move===4)) {
             setMove(move + 1)
@@ -27,6 +17,7 @@ export default function Level2() {
             rightActive()
         }
     }
+
     const f2=(e)=>{
         if (move >= 1 &&
             (e.target.id === "two" || e.target.id === "three" || e.target.id === "eight" || e.target.id === "thirteen" || e.target.id ==="twenty")) {
@@ -61,9 +52,11 @@ export default function Level2() {
         } else {
             console.log("start form first")
             wrongActive();
+            setMove(0)
             swal("Wrong Path!", "Plaese Start From beginning!", "warning");
         }
     }
+
     return (
         <div>
             <div id="myid" className="container">
