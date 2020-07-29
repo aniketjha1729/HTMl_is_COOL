@@ -307,7 +307,7 @@ window.propellent = function (e) {
         }
        
         
-        propellentoption1.text = "LXO/LH2"; propellentoption1.value = "LXO/LH2";
+        propellentoption1.text = "LOx/LH2"; propellentoption1.value = "LOx/LH2";
         propellentoption2.text = "MMH/MON"; propellentoption2.value = "MMH/MON";
         propellentoption3.text = "LOx/RP-1"; propellentoption3.value = "LOx/RP-1";
         selectpropellent.add(propellentoption1);
@@ -365,7 +365,7 @@ window.showValue = function (e) {
         ispvalue = 296;
         Isp.value = ispvalue;
         Ve.value = ve;
-    } else if (e.value == "LXO/LH2") {
+    } else if (e.value == "LOx/LH2") {
         ve = 4.41;
         ispvalue = 450;
         Isp.value = ispvalue;
