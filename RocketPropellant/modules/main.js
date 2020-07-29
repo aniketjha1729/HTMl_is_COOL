@@ -419,7 +419,7 @@ window.showResult = function (e) {
         // console.log(result)
         if(result>6){
 
-            outputLevel1.innerHTML= `Number of Satge = ${result}`;
+            outputLevel1.innerHTML= `Number of Stage = ${result}`;
             //outputLevel.add(this.document.createElement("br"));
             outputLevel2.innerHTML = `Oh no! Number of stages exceeds 6! Which means you cannot carry the payload !`;
             // console.log("Not Possible")

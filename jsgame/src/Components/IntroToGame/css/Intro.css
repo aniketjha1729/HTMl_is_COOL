@@ -1,0 +1,17 @@
+body{
+    background-color: #f1f1f1;
+}
+
+.blocks{
+    border-collapse: separate;
+    border-spacing: 25px;
+    margin: auto;
+}
+.block{
+    border-radius: 10px;
+    background-color: rgb(240, 106, 106);
+    width: 100px;
+    height: 100px;
+}
+
+

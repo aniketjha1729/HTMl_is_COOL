@@ -1,0 +1,74 @@
+body{
+    background-color: #f1f1f1;
+}
+/* .blockgame{
+    border: 1px solid green;
+} */
+.block{
+    border-radius: 10px;
+    background-color: rgb(55, 74, 160);
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.blocks{
+    border-collapse: separate;
+    border-spacing: 15px;
+    margin: auto;
+    text-align: center;
+    color: beige;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+
+}
+.text{
+    text-align: center;
+    margin: auto;
+    margin-top:5%; 
+}
+.blink{
+    position: absolute; 
+    animation: blink 1s ease-in-out alternate infinite;
+}
+
+@keyframes blink {
+            0% {
+                width:65px;
+                height: 65px;
+                margin-left: 17%;
+                border: 2px solid rgb(255, 255, 255); 
+                border-radius: 10px;
+                margin-top: -45%;
+            }
+
+            100% {
+                width: 50px;
+                height: 50px;
+                margin-left: 25%;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 10px;
+                margin-top: -39%;
+            }
+        }
+.codes{
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: auto;
+    
+    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+}
+i{
+    color: #807272;
+}
+
+.score{
+    color: rgb(243, 82, 82);
+}
+
+.footer{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+}
+
