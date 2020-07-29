@@ -64,21 +64,21 @@ window.to = (e) => {
     Mprop.value = ""
     payload = ""
     if (e.value == "lowearth") {
-        delta = 9.4
+        delta = 9.4*1000
         Deltav.value = delta;
 
     } else if (e.value == "geotransfer") {
-        delta = 11.84
+        delta = 11.84*1000
         Deltav.value = delta;
 
     }
     else if (e.value == "moon") {
-        delta = 15.07
+        delta = 15.07*1000
         Deltav.value = delta;
 
     }
     else if (e.value == "mars") {
-        delta = 18.91
+        delta = 18.91*1000
         Deltav.value = delta;
 
     }
