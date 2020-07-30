@@ -72,7 +72,16 @@ export default function IGLevel2() {
                                 </div>
                             </div>
                         </div>
-                    </Link> : ''
+                    </Link> :
+                    <Link to="/introtogamelevel1">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Link> 
                 }
                 <div className="row">
                     <div className="col-8">
@@ -86,7 +95,7 @@ export default function IGLevel2() {
                                                 {move === 7? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="blockb" id="three" onClick={f2}>
-                                                {move === 8? <div className="blink" id="blink"></div> : ''}
+                                                {move === 8 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
                                             </td>
                                             <td className="block" id="four" onClick={f2}></td>
                                             <td className="block" id="five" onClick={f2}></td>

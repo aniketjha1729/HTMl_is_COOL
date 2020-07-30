@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound";
 import right from '../audio/right1.mp3'
 import wrong from '../audio/wrong1.mp3'
@@ -10,7 +10,7 @@ export default function IGLevel1() {
     const [move,setMove] = useState(0)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
-
+    const history = useHistory()
     function f1(e){
         if(e.target.id==="two" && move===0){
             setMove(move+1)
@@ -33,7 +33,8 @@ export default function IGLevel1() {
                 console.log("five")
                 setMove(move+1)
                 rightActive()
-                swal("Good job!", " ", "success");
+                swal("Good job!", " ", "success")
+                
             } else {
                 console.log("wrong Path")
                 wrongActive()
@@ -61,8 +62,18 @@ export default function IGLevel1() {
                                 </div>
                             </div>
                         </div>  
-                    </Link> : ''
+                    </Link> : 
+                    <Link to="/introtogame">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Link> 
                 }
+                
                 <div className="row">
                     <div className="col-6">
                         <div className="blockgame">
@@ -87,7 +98,7 @@ export default function IGLevel1() {
                                     </tr>
                                     <tr>
                                         <td className="block" id="five" onClick={f2}>
-                                            {move === 4 ? <div className="blink" id="blink"></div> : ''}
+                                                {move === 4 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
                                         </td>
                                         <td className="block" id="six" onClick={f2}></td>
                                     </tr>
@@ -123,6 +134,9 @@ export default function IGLevel1() {
                         </div>
                     </div>
                 </div><br/><br/>
+                <div className="footer">
+                    Click on square blocks as per instructions given on right side.
+                </div>
             </div>  
         </div>
     )

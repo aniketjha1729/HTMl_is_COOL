@@ -24,10 +24,19 @@ body{
 .blink{
     animation: blink 1s ease-in-out alternate infinite;
 }
-
+.correctans{
+    width:55px;
+    height: 55px;
+    margin-left: 20%;
+    border: 4px solid rgb(255, 255, 255); 
+    border-radius: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
 @keyframes blink {
             0% {
-               width:55px;
+                width:55px;
                 height: 55px;
                 margin-left: 20%;
                 border: 4px solid rgb(255, 255, 255); 

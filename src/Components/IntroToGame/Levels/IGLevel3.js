@@ -62,7 +62,16 @@ export default function IGLevel3() {
                                 </div>
                             </div>
                         </div>
-                    </Link> : ''
+                    </Link> :
+                    <Link to="/introtogamelevel2">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Link> 
                 }
                 <div className="row">
                     <div className="col-8">
@@ -73,6 +82,7 @@ export default function IGLevel3() {
                                         <tr>
                                             <td className="block" id="one" onClick={f2}>
                                                 {move === 0 ? <div className="blink" id="blink"></div> : ''}
+                                                {move == 4 ? <div className="correctans" id="blink"><b>&#10003;</b></div>:''}
                                             </td>
                                             <td className="blockb" id="two" onClick={f1}>
                                                 {move === 1 ? <div className="blink" id="blink"></div> : ''}
@@ -84,7 +94,7 @@ export default function IGLevel3() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="seven" onClick={f2}>
-                                                {move === 3 || move==4 ? <div className="blink" id="blink"></div> : ''}
+                                                {move === 3 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="blockb" id="eight" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}
@@ -135,7 +145,7 @@ export default function IGLevel3() {
                 </div>
                 <div className="footer">
                     Click on square blocks as per instructions given on right side.
-                 </div>
+                </div>
             </div>
         </div>
     )
