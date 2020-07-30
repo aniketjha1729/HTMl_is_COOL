@@ -1,6 +1,6 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import "./css/Level7.css";
-
 import useSound from "use-sound";
 import right from "./audio/right1.mp3"
 import wrong from "./audio/wrong1.mp3"

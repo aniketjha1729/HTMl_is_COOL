@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useState } from 'react'
 import "../css/Level2.css"
 import useSound from "use-sound";
@@ -5,7 +6,7 @@ import right from '../audio/right1.mp3'
 import wrong from '../audio/wrong1.mp3'
 import swal from "sweetalert";  
 
-export default function Level2() {
+export default function IGLevel2() {
     const [move, setMove] = useState(0)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
