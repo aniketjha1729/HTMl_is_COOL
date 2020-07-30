@@ -7,7 +7,6 @@ import IGLevel1 from "./Components/IntroToGame/Levels/IGLevel1"
 import IGLevel2 from './Components/IntroToGame/Levels/IGLevel2';
 import IGLevel3 from './Components/IntroToGame/Levels/IGLevel3';
 
-
 export default function App() {
   return (
       <BrowserRouter>

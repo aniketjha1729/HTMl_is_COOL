@@ -2,10 +2,11 @@
 import React,{useState} from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound";
+import classNames from 'classnames';
 import right from '../audio/right1.mp3'
 import wrong from '../audio/wrong1.mp3'
 import swal from "sweetalert";
-import "../css/Level1.css";
+import "../css/Level.css";
 export default function IGLevel1() {
     const [move,setMove] = useState(0)
     const [rightActive] = useSound(right);
@@ -48,6 +49,9 @@ export default function IGLevel1() {
             swal("Wrong Path!", "Plaese Start From beginning!", "warning");
         }
     }
+    
+    const wrapper=classNames('block',
+    {'myblock':move!==0})
 
     return (
         <div>
@@ -81,23 +85,23 @@ export default function IGLevel1() {
                                 <table className="blocks">
                                 <tbody>
                                     <tr>
-                                        <td className="block" onClick={f2} id="one">
+                                        <td className={move>0?'myblock':'block'} onClick={f2} id="one">
                                             {move === 0 ? <div className="blink" id="blink"></div> : ''}
                                         </td>
-                                        <td className="block" id="two" onClick={f1}>
+                                        <td className={move>1?'myblock':'block'} id="two" onClick={f1}>
                                             {move === 1 ? <div className="blink" id="blink"></div> : ''}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className="block" id="three" onClick={f2}>
+                                        <td className={move>3?'myblock':'block'} id="three" onClick={f2}>
                                             {move === 3 ? <div className="blink" id="blink"></div> : ''}
                                         </td>
-                                        <td className="block" id="four" onClick={f2}>
+                                        <td className={move>2?'myblock':'block'} id="four" onClick={f2}>
                                             {move === 2 ? <div className="blink" id="blink"></div> : ''}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className="block" id="five" onClick={f2}>
+                                        <td className={move>4?'myblock':'block'} id="five" onClick={f2}>
                                                 {move === 4 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
                                         </td>
                                         <td className="block" id="six" onClick={f2}></td>

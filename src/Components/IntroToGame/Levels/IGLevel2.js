@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, {useState } from 'react'
 import { Link } from 'react-router-dom'
-import "../css/Level2.css"
+import "../css/Level.css"
 import useSound from "use-sound";
 import right from '../audio/right1.mp3'
 import wrong from '../audio/wrong1.mp3'
@@ -90,11 +90,11 @@ export default function IGLevel2() {
                                 <table className="blocks">
                                     <tbody>
                                         <tr>
-                                            <td className="block" id="one" onClick={f2}></td>
-                                            <td className="blockb" id="two" onClick={f2}>
+                                            <td className='block' id="one" onClick={f2}></td>
+                                            <td className={move>7?'myblock':'block'} id="two" onClick={f2}>
                                                 {move === 7? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className="blockb" id="three" onClick={f2}>
+                                            <td className={move>8?'myblock':'block'} id="three" onClick={f2}>
                                                 {move === 8 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
                                             </td>
                                             <td className="block" id="four" onClick={f2}></td>
@@ -103,7 +103,7 @@ export default function IGLevel2() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="seven" onClick={f2}></td>
-                                            <td className="blockb" id="eight" onClick={f2}>
+                                            <td className={move>6?'myblock':'block'} id="eight" onClick={f2}>
                                                 {move === 6 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="block" id="nine" onClick={f2}></td>
@@ -112,10 +112,10 @@ export default function IGLevel2() {
                                             <td className="block" id="twelve" onClick={f2}></td>
                                         </tr>
                                         <tr>
-                                            <td className="blockb" id="thirteen" onClick={f2}>
+                                            <td className={move>0?'myblock':'block'} id="thirteen" onClick={f2}>
                                                 {move === 0||move===4 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className="blockb" id="forteen" onClick={f1}>
+                                            <td className={move>1?'myblock':'block'} id="forteen" onClick={f1}>
                                                 {move === 1||move===3||move===5? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="block" id="fifteen" onClick={f2}></td>
@@ -125,7 +125,7 @@ export default function IGLevel2() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="nineteen" onClick={f2}></td>
-                                            <td className="blockb" id="twenty" onClick={f2}>
+                                            <td className={move>2?'myblock':'block'} id="twenty" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="block" id="twentyone" onClick={f2}></td>
