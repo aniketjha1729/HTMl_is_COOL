@@ -3,12 +3,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "../css/Level.css"
 import useSound from "use-sound";
-import right from '../audio/right1.mp3'
-import wrong from '../audio/wrong1.mp3'
+import step from '../../audio/step.mp3'
+import right from '../../audio/right1.mp3'
+import wrong from '../../audio/wrong1.mp3'
 import swal from "sweetalert"; 
 
 export default function IGLevel3() {
     const [move, setMove] = useState(0)
+    const [stepActive]=useSound(step)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
 
@@ -16,7 +18,7 @@ export default function IGLevel3() {
         if (e.target.id === "two" && (move === 0 )) {
             setMove(move + 1)
             console.log(move)
-            rightActive()
+            stepActive();
         }
     }
 
@@ -26,11 +28,11 @@ export default function IGLevel3() {
             if ((move === 1 ) && e.target.id === "eight") {
                 console.log("eight")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 2 && e.target.id === "seven") {
                 console.log("seven")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 3 && e.target.id === "one") {
                 console.log("one")
                 setMove(move + 1)
@@ -67,7 +69,7 @@ export default function IGLevel3() {
                         <div className="row ">
                             <div className="col">
                                 <div className="nextGame">
-                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                    <button type="button" className="btn btn-danger btn-lg">Black</button>
                                 </div>
                             </div>
                         </div>

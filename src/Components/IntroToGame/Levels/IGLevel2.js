@@ -3,12 +3,14 @@ import React, {useState } from 'react'
 import { Link } from 'react-router-dom'
 import "../css/Level.css"
 import useSound from "use-sound";
-import right from '../audio/right1.mp3'
-import wrong from '../audio/wrong1.mp3'
+import step from '../../audio/step.mp3'
+import right from '../../audio/right1.mp3'
+import wrong from '../../audio/wrong1.mp3'
 import swal from "sweetalert";  
 
 export default function IGLevel2() {
     const [move, setMove] = useState(0)
+    const [stepActive] = useSound(step)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
     
@@ -16,7 +18,7 @@ export default function IGLevel2() {
         if (e.target.id === "forteen" && (move===0||move===2||move===4)) {
             setMove(move + 1)
             console.log(move)
-            rightActive()
+            stepActive()
         }
     }
 
@@ -26,19 +28,19 @@ export default function IGLevel2() {
             if ((move === 1 || move === 3) && e.target.id === "thirteen") {
                 console.log("thirteen")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 1 && e.target.id === "twenty") {
                 console.log("twenty")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 5 && e.target.id === "eight") {
                 console.log("eight")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 6 && e.target.id === "two") {
                 console.log("two")
                 setMove(move + 1)
-                rightActive();
+                stepActive();
             } else if (move === 7 && e.target.id === "three") {
                 console.log("three")
                 setMove(move + 1)
