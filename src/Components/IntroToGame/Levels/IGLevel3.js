@@ -106,7 +106,7 @@ export default function IGLevel3() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="thirteen" onClick={f2}></td>
-                                            <td className="block" id="forteen" onClick={f1}></td>
+                                            <td className="block" id="forteen" onClick={f2}></td>
                                             <td className="block" id="fifteen" onClick={f2}></td>
                                             <td className="block" id="sixteen" onClick={f2}></td>
                                             <td className="block" id="seventeen" onClick={f2}></td>

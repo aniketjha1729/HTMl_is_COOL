@@ -58,24 +58,26 @@ export default function IGLevel1() {
             <div id="myid" className="container">
                 <br/><br/>
                 {move === 4 ? 
-                    <Link to="/introtogamelevel2">
-                        <div className="row ">
+                    <div className="row ">
                             <div className="col">
-                                <div className="nextGame">
-                                    <button type="button" className="btn btn-success btn-lg">Next</button>
-                                </div>
+                                <Link to="/introtogamelevel2">
+                                    <div className="nextGame">
+                                        <button type="button" className="btn btn-success btn-lg">Next</button>
+                                    </div>
+                                </Link>
                             </div>
-                        </div>  
-                    </Link> : 
-                    <Link to="/introtogame">
+                        </div> : 
+                   
                         <div className="row ">
                             <div className="col">
-                                <div className="nextGame">
-                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
-                                </div>
+                                <Link to="/introtogame">
+                                    <div className="nextGame">
+                                        <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
-                    </Link> 
+                     
                 }
                 
                 <div className="row">
