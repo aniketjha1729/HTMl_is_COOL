@@ -1,9 +1,9 @@
 body{
     background-color: #f1f1f1;
 }
-/* .blockgame{
-    border: 1px solid green;
-} */
+.nextGame{
+    float: right;
+}
 .block{
     border-radius: 10px;
     background-color: rgb(240, 106, 106);

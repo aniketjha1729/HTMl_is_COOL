@@ -1,17 +1,16 @@
 /* eslint-disable */
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
 import useSound from "use-sound";
 import right from '../audio/right1.mp3'
 import wrong from '../audio/wrong1.mp3'
 import swal from "sweetalert";
-import "../css/Level2.css";
+import "../css/Level1.css";
 export default function IGLevel1() {
     const [move,setMove] = useState(0)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
-   
 
-    
     function f1(e){
         if(e.target.id==="two" && move===0){
             setMove(move+1)
@@ -19,6 +18,7 @@ export default function IGLevel1() {
             rightActive()
         }  
     };
+
     const f2=(e)=>{
         if (move >= 1 && (e.target.id === "three" || e.target.id === "four" || e.target.id === "five")){
             if (move === 1 && e.target.id === "four") {
@@ -50,14 +50,19 @@ export default function IGLevel1() {
 
     return (
         <div>
-            <audio id="rightAns">
-                <source src="wrong1.mp3" type="audio/ogg"/>
-             </audio>
-                <audio id="wrongAns">
-                    <source src="right1.mp3" type="audio/ogg"/>
-            </audio>
             <div id="myid" className="container">
                 <br/><br/>
+                {move === 4 ? 
+                    <Link to="/introtogamelevel2">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-success btn-lg">Next</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </Link> : ''
+                }
                 <div className="row">
                     <div className="col-6">
                         <div className="blockgame">

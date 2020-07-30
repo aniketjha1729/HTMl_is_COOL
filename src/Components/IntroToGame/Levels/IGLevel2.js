@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, {useState } from 'react'
+import { Link } from 'react-router-dom'
 import "../css/Level2.css"
 import useSound from "use-sound";
 import right from '../audio/right1.mp3'
@@ -62,6 +63,17 @@ export default function IGLevel2() {
         <div>
             <div id="myid" className="container">
                 <br /><br />
+                {move === 8 ?
+                    <Link to="/introtogamelevel3">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-success btn-lg">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Link> : ''
+                }
                 <div className="row">
                     <div className="col-8">
                         <div className="blockgame">

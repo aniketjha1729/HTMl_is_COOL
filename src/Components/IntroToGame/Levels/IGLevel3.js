@@ -53,6 +53,17 @@ export default function IGLevel3() {
         <div>
             <div id="myid" className="container">
                 <br /><br />
+                {move === 4 ?
+                    <Link to="/">
+                        <div className="row ">
+                            <div className="col">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-success btn-lg">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Link> : ''
+                }
                 <div className="row">
                     <div className="col-8">
                         <div className="blockgame">
@@ -73,7 +84,7 @@ export default function IGLevel3() {
                                         </tr>
                                         <tr>
                                             <td className="block" id="seven" onClick={f2}>
-                                                {move === 3 ? <div className="blink" id="blink"></div> : ''}
+                                                {move === 3 || move==4 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="blockb" id="eight" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}

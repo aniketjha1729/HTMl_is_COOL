@@ -12,7 +12,9 @@ export default function Welcome() {
               <div className="card-body">
                 <h5 className="card-title">Intro To Game</h5>
                 <p className="card-text">Simple Logical Game</p>
-                <Link to="/introtogame">Start</Link>
+                <Link to="/introtogame">
+                  <button type="button" className="btn btn-primary">Start</button>
+                </Link>
               </div>
             </div>
           </div>
