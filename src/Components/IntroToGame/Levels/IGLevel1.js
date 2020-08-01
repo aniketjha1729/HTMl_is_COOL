@@ -72,7 +72,7 @@ export default function IGLevel1() {
                    
                         <div className="row ">
                             <div className="col">
-                                <Link to="/introtogame">
+                                <Link to="/">
                                     <div className="nextGame">
                                         <button type="button" className="btn btn-danger btn-lg">Back</button>
                                     </div>

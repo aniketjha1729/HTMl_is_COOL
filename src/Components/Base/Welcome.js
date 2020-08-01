@@ -12,7 +12,7 @@ export default function Welcome() {
               <div className="card-body">
                 <h5 className="card-title">Intro To Game</h5>
                 <p className="card-text">Simple Logical Game</p>
-                <Link to="/introtogame">
+                <Link to="/introtogamelevel1">
                   <button type="button" className="btn btn-primary">Start</button>
                 </Link>
               </div>
@@ -23,9 +23,9 @@ export default function Welcome() {
               <div className="card-body">
                 <h5 className="card-title">Games:Condition</h5>
                 <p className="card-text">Control Flow Games</p>
-                <a href="#" className="btn btn-primary">
-                  Start
-                </a>
+                <Link to="/conditionlevel1">
+                  <button type="button" className="btn btn-primary">Start</button>
+                </Link>
               </div>
             </div>
           </div>
