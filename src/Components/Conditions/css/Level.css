@@ -29,6 +29,12 @@ body{
     width: 80px;
     height: 80px;
 }
+.block-black{
+    border-radius: 10px;
+    background-color: #626362;
+    width: 80px;
+    height: 80px;
+}
 .myblock{
     border-radius: 10px;
     background-color: rgb(240, 106, 106);
@@ -53,6 +59,13 @@ body{
 .myblock-green{
     border-radius: 10px;
     background-color: #67b334;
+    width: 80px;
+    height: 80px;
+    border: 4px solid black;
+}
+.myblock-black{
+    border-radius: 10px;
+    background-color: #626362;
     width: 80px;
     height: 80px;
     border: 4px solid black;
@@ -106,11 +119,16 @@ body{
     color: rgb(240, 106, 106);
     font-size: 30px;
 }
+
 .square{
     font-size: 40px;
 }
 .square-yellow{
     color: #faa609;
+    font-size: 40px;
+}
+.square-black{
+    color: #626362;
     font-size: 40px;
 }
 .score{
