@@ -88,7 +88,7 @@ export default function CLevel2() {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className={move > 0 ? 'myblockw' : 'blockw'} id="three" onClick={f2}>
+                                            <td className={move > 0 ? 'myblock-white' : 'block-white'} id="three" onClick={f2}>
                                                 {move === 0 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className={move > 3 ? 'myblock' : 'block'} id="four" onClick={f2}>
@@ -110,20 +110,20 @@ export default function CLevel2() {
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>up()</b></td>
+                                            <td className="code">up()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>if &#9632; &#123;</b></td>
+                                            <td className="coder">if <b className="square">&#9632;</b> &#123;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b> &nbsp; &nbsp; right()</b></td>
+                                            <td className="code">&nbsp; &nbsp; right()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>&#125;</b></td>
+                                            <td className="coder">&#125;</td>
                                         </tr>
                                 
                                         <tr>
-                                            <td className="code"><b>down()</b></td>
+                                            <td className="code">down()</td>
                                         </tr>
 
 

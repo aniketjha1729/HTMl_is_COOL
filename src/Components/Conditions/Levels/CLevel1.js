@@ -89,13 +89,13 @@ export default function CLevel1() {
                                 <table className="blocks">
                                     <tbody>
                                         <tr>
-                                            <td className={move > 0 ? 'myblockw' : 'blockw'} onClick={f2} id="one">
+                                            <td className={move > 0 ? 'myblock-white' : 'block-white'} onClick={f2} id="one">
                                                 {move === 0 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className={move > 1 ? 'myblock' : 'block'} id="two" onClick={f1}>
                                                 {move === 1 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className="blockw" id="three" onClick={f2}></td>
+                                            <td className="block-white" id="three" onClick={f2}></td>
                                             <td className="block" id="four" onClick={f2}></td>
                                         </tr>
                                         <tr>
@@ -103,19 +103,19 @@ export default function CLevel1() {
                                                 {move === 3 ? <div className="blink" id="blink"></div> : ''}
                                                 {move === 5 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
                                             </td>
-                                            <td className={move > 2 ? 'myblockw' : 'blockw'} id="six" onClick={f2}>
+                                            <td className={move > 2 ? 'myblock-white' : 'block-white'} id="six" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
                                             <td className="block" id="seven" onClick={f2}></td>
-                                            <td className="blockw" id="eight" onClick={f2}></td>
+                                            <td className="block-white" id="eight" onClick={f2}></td>
                                         </tr>
                                         <tr>
-                                            <td className={move > 4 ? 'myblockw' : 'blockw'} id="nine" onClick={f2}>
+                                            <td className={move > 4 ? 'myblock-white' : 'block-white'} id="nine" onClick={f2}>
                                                 {move === 4 ? <div className="blink" id="blink"></div> : ''}
                                                
                                             </td>
                                             <td className="block" id="ten" onClick={f2}></td>
-                                            <td className="blockw" id="eleven" onClick={f2}></td>
+                                            <td className="block-white" id="eleven" onClick={f2}></td>
                                             <td className="block" id="twelve" onClick={f2}></td>
                                         </tr>
                                         
@@ -133,31 +133,31 @@ export default function CLevel1() {
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>right()</b></td>
+                                            <td className="code">right()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>if &#9632; &#123;</b></td>
+                                            <td className="coder">if <b className="square">&#9632;</b> &#123;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b> &nbsp; &nbsp; down()</b></td>
+                                            <td className="code"> &nbsp; &nbsp; down()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>&#125;</b></td>
+                                            <td className="coder">&#125;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>left()</b></td>
+                                            <td className="code">left()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>if &#9632; &#123;</b></td>
+                                            <td className="coder">if <b className="square">&#9632;</b> &#123;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b> &nbsp; &nbsp; down()</b></td>
+                                            <td className="code"> &nbsp; &nbsp; down()</td>
                                         </tr>
                                         <tr>
-                                            <td className="coder"><b>&#125;</b></td>
+                                            <td className="coder">&#125;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code"><b>up()</b></td>
+                                            <td className="code">up()</td>
                                         </tr>
 
 
