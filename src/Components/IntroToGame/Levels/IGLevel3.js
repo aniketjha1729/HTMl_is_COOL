@@ -134,10 +134,10 @@ export default function IGLevel3() {
                                             {move === 1 ? <td className="codec"><b>down()</b></td> : <td className="code"><b>down()</b></td>}
                                         </tr>
                                         <tr>
-                                            {move === 2 ? <td className="codec"><b>left()</b></td> : <td className="code"><b>up()</b></td>}
+                                            {move === 2 ? <td className="codec"><b>left()</b></td> : <td className="code"><b>left()</b></td>}
                                         </tr>
                                         <tr>
-                                            {move === 3 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>left()</b></td>}
+                                            {move === 3 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>up()</b></td>}
                                         </tr>
                                     </tbody>
                                 </table>
