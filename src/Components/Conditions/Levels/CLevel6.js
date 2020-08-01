@@ -93,10 +93,10 @@ export default function CLevel6() {
                                             <td className={move > 2 ? 'myblock' : 'block'} id="three" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className={move > 3 ? 'myblock' : 'block'} id="four" onClick={f2}>
+                                            <td className={move > 3 ? 'myblock-white' : 'block-white'} id="four" onClick={f2}>
                                                 {move === 3 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className="block-white" id="five" onClick={f2}></td>
+                                            <td className="block" id="five" onClick={f2}></td>
                                             <td className="block-white" id="six" onClick={f2}></td>
                                         </tr>
                                         <tr>
