@@ -34,7 +34,13 @@ export default function CLevel8() {
             } else if ((move === 3 ||move===5||move===7) && e.target.id === "nine") {
                 console.log("two")
                 setMove(move + 1)
-                stepActive();
+                if(move===7){
+                    rightActive()
+                    swal("Good job!", " ", "success")
+                }else{
+                    stepActive();
+                }
+                
             } else {
                 console.log("wrong Path")
                 wrongActive()

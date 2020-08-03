@@ -117,12 +117,17 @@ body{
 }
 .coder{
     color: rgb(240, 106, 106);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .square{
     font-size: 40px;
 }
+.square-white{
+    font-size: 40px;
+    color: #c2c2c2;
+}
+
 .square-yellow{
     color: #faa609;
     font-size: 40px;
@@ -130,6 +135,30 @@ body{
 .square-black{
     color: #626362;
     font-size: 40px;
+}
+.square-red-cross{
+    background-color: rgb(243, 82, 82);
+    width:30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.square-yellow-cross{
+    background-color: #faa609;
+    width:30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.square-green-cross{
+    background-color: #67b334;
+    width:30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
 }
 .score{
     color: rgb(243, 82, 82);
