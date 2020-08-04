@@ -95,7 +95,7 @@ export default function CLevel18() {
 
                     <div className="row ">
                         <div className="col">
-                            <Link to="/conditionlevel14">
+                            <Link to="/conditionlevel17">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg">Back</button>
                                 </div>
