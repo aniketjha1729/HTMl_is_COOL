@@ -186,19 +186,28 @@ export default function CLevel14() {
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
                                         <tr>
-                                            <td className="code">repeat (2) &#123;</td>
+                                            <td className="code">repeat (4) &#123;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-red-cross">&#10006;</span> &nbsp;&#123;</td>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;<b>up()</b></td>
                                         </tr>
                                         <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; left()</td>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;<b>down()</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; down()</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; up()</td>
                                         </tr>
                                         <tr>
                                             <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&#125;</td>
                                         </tr>
                                         <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;<b>up()</b></td>
+                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;<b>left()</b></td>
                                         </tr>
                                         <tr>
                                             <td className="code">&#125;</td>
