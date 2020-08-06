@@ -147,27 +147,29 @@ export default function CLevel19() {
                                         <tr>
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
-                                        <tr>
-                                            <td className="code">repeat (5) &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;down()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;&#125; else &#123; </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<b>left()</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&#125;</td>
-                                        </tr>
+                                        <div className={move >= 0 && move <= 4 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">repeat (5) &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;down()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;&#125; else &#123; </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<b>left()</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&nbsp; &nbsp;&nbsp; &nbsp;&#125;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&#125;</td>
+                                            </tr>
+                                        </div>
                                     </tbody>
                                 </table>
                             </div>

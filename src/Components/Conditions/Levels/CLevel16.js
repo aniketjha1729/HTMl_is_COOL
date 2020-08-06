@@ -135,51 +135,57 @@ export default function CLevel16() {
                                         <tr>
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
-                                        <tr>
-                                            <td className="code">left()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">if <b className="square-black">&#9632;</b> &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; down()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
-                                        </tr>
+                                        <div className={move === 0 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">left()</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 1 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="coder">if <b className="square-black">&#9632;</b> &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; down()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&#125; else &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&#125;</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move >=2 &&move<=3 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="coder">if <b className="square">&#9632;</b> &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; left()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; up()</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td className="coder">&#125; else &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">&#125;</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td className="coder">if <b className="square">&#9632;</b> &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; left()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; up()</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td className="coder">&#125; else &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">left()</td>
-                                        </tr>   
+                                            <tr>
+                                                <td className="coder">&#125; else &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; right()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">&#125;</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 4 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">left()</td>
+                                            </tr>   
+                                        </div>
                                     </tbody>
                                 </table>
                             </div>

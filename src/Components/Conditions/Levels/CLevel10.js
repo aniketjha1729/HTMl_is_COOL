@@ -108,23 +108,28 @@ export default function CLevel10() {
                                         <tr>
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
-                                        <tr>
-                                            <td className="code">right();</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">if <span className="square-red-cross">&#10006;</span> &nbsp;&#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; down()</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td className="coder">&#125;</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td className="code"><b>right()</b></td>
-                                        </tr>
+                                        <div className={move === 0 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">right();</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 1 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="coder">if <span className="square-red-cross">&#10006;</span> &nbsp;&#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp; down()</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td className="coder">&#125;</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 2  ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code"><b>right()</b></td>
+                                            </tr>
+                                        </div>
                                     </tbody>
                                 </table>
                             </div>

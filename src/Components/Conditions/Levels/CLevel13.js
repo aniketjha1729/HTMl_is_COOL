@@ -96,7 +96,9 @@ export default function CLevel13() {
                                             <td className={move > 2 ? 'myblock' : 'block'} id="nine" onClick={f2}>
                                                 {move === 2 ? <div className="blink" id="blink"></div> : ''}
                                             </td>
-                                            <td className='block' id="ten" onClick={f2}></td>
+                                            <td className='block' id="ten" onClick={f2}>
+                                                {move === 3 ? <div className="correctans" id="blink"><b>&#10003;</b></div> : ''}
+                                            </td>
                                             
                                         </tr>
                                         <tr>
@@ -122,24 +124,28 @@ export default function CLevel13() {
                                         <tr>
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
-                                        <tr>
-                                            <td className="code">repeat (234) &#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-red-cross">&#10006;</span> &nbsp;&#123;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; up()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code"><b>right()</b></td>
-                                        </tr>
+                                        <div className={move >=0 && move<=1 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">repeat (234) &#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;if <span className="square-red-cross">&#10006;</span> &nbsp;&#123;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; up()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;&#125;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&#125;</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 2 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code"><b>right()</b></td>
+                                            </tr>
+                                        </div>
                                     </tbody>
                                 </table>
                             </div>

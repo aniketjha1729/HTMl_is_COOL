@@ -9,7 +9,6 @@ body{
     background-color: rgb(240, 106, 106);
     width: 80px;
     height: 80px;
-    
 }
 .myblock{
     border-radius: 10px;
@@ -55,17 +54,14 @@ body{
         }
 .codes{
     border-collapse: separate;
-    
     margin: auto;
     font-size: 35px;
     font-family: 'Orbitron', sans-serif;
 }
-.code{
-    color: rgb(83, 83, 235);   
-}
 .codec{
-    color: rgb(100, 160, 4);
+    background-color: rgb(255, 253, 159);
 }
+
 .score{
     color: rgb(243, 82, 82);
 }

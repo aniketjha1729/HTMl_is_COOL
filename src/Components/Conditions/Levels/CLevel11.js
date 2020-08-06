@@ -130,37 +130,45 @@ export default function CLevel11() {
                                         <tr>
                                             <td className="score"><b>Score:{move}</b></td>
                                         </tr>
-                                        <tr>
-                                            <td className="code">right()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">
-                                                if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;down()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">up()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">
-                                                if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;up()</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="code">&#125;</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="coder">left()</td>
-                                        </tr>
+                                        <div className={move === 0 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">right()</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 1 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">
+                                                    if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;down()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&#125;</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="coder">up()</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 2 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="code">
+                                                    if <span className="square-yellow-cross">&#10006;</span> &nbsp;&#123;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&nbsp; &nbsp;&nbsp; &nbsp;up()</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="code">&#125;</td>
+                                            </tr>
+                                        </div>
+                                        <div className={move === 3 ? 'codec' : ''}>
+                                            <tr>
+                                                <td className="coder">left()</td>
+                                            </tr>
+                                        </div>
                                         
                                     </tbody>
                                 </table>
