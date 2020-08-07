@@ -183,7 +183,7 @@ export default function CLevel14() {
                                 <table className="codes">
                                     <tbody>
                                         <tr>
-                                            <td className="score"><b>Score:{move}</b></td>
+                                            <td className="score"><b>Score:{move === 16 ? 1 : 0}</b></td>
                                         </tr>
                                         <div className={move >= 0 && move<=15 ? 'codec' : ''}>
                                             <tr>

@@ -133,7 +133,7 @@ export default function CLevel8() {
                                 <table className="codes">
                                     <tbody>
                                         <tr>
-                                            <td className="score"><b>Score:{move}</b></td>
+                                            <td className="score"><b>Score:{move === 8 ? 1 : 0}</b></td>
                                         </tr>
                                         <div className={move >= 0 && move <= 7 ? 'codec' : ''}>
                                             <tr>

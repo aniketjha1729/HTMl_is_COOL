@@ -138,7 +138,7 @@ export default function CLevel3() {
                                 <table className="codes">
                                     <tbody>
                                         <tr>
-                                            <td className="score"><b>Score:{move}</b></td>
+                                            <td className="score"><b>Score:{move === 4 ? 1 : 0}</b></td>
                                         </tr>
                                         <div className={move === 0 ? 'codec' : ''}>
                                             <tr>

@@ -146,7 +146,7 @@ export default function IGLevel2() {
                                 <table className="codes">
                                     <tbody>
                                         <tr>
-                                            <td className="score"><b>Score:{move}</b></td>
+                                            <td className="score"><b>Score:{move === 8 ? 1 : 0}</b></td>
                                         </tr>
                                         <tr>
                                             {move === 0 ? <td className="codec"><b>right()</b></td> : <td className="code"><b>right()</b></td>}
