@@ -9,19 +9,19 @@ export default function Data() {
             fontSize,textStartY,textGap,textStartX,
             Hint,HintColor,BorderColor}=PostData;
     
-    const [textdata, setTextdata] = useState(0)       
-
-    const f1=()=>{
-        setTextdata(textdata+1)
-        console.log(textdata)
+    var textdata=0;
+    const myf1=()=>{
+        textdata++;   
     }
 
-    var blocksColor=[];
-    blocks.map((block,index)=>{
-        var temp=block.replace(/0x/,"#")
-        blocksColor.push(temp)
+    const cevent=()=>{
+        console.log("helo")
+    }
+    const blockColor=[]
+    blocks.map((blocks,index)=>{
+        blockColor.push(blocks.replace(/0x/,"#"))
     })
-
+    
     var rows = [];
     for(var i=0;i<row;i++){
         rows.push(i);
@@ -35,27 +35,26 @@ export default function Data() {
         <div>
             <div id="myid" className="container">
                 <br /><br />
-                
-                    <div className="row ">
-                        <div className="col">
-                            <Link to="/">
-                                <div className="nextGame">
-                                    <button type="button" className="btn btn-success btn-lg">Next</button>
-                                </div>
-                            </Link>
-                        </div>
-                    </div> 
+                <div className="row ">
+                    <div className="col">
+                        <Link to="/">
+                            <div className="nextGame">
+                                <button type="button" className="btn btn-success btn-lg">Next</button>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-6">
                         <div className="blockgame">
                             <div className="container">
                                 <table className="blocks">
-                                    
-                                    <tbody> 
-                                        {columns.map((tablerow,tablerowindex)=>{
-                                            return <tr key={tablerowindex}>{rows.map((tablecolumn,tablecolumnindex)=>{
-                                                return <td key={tablecolumnindex} className="block">
-                                                    {text[2]}
+                                    <tbody>
+                                        {columns.map((tablerow, tablerowindex) => {
+                                            return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
+                                                return <td onClick={cevent} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
+                                                    {text[textdata]}
+                                                    {myf1()}
                                                 </td>
                                             })}</tr>
                                         })}
@@ -69,7 +68,7 @@ export default function Data() {
                             <div className="container">
                                 <table className="codes">
                                     <tbody>
-                                        {code.map((codedata,codedataindex)=>{
+                                        {code.map((codedata, codedataindex) => {
                                             return <tr key={codedataindex}>
                                                 <td className="code">{codedata}</td>
                                             </tr>
