@@ -1,0 +1,22 @@
+{
+    "blocks":["0xc64a4a","0xc64a4a","0xc64a4a","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0x959da8","0xc64a4a","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0x959da8","0x959da8","0xc64a4a"],
+    "code":["     age=10","1.  left()","2.  up()","3.  If(not age):","4.    print(\"age?\")","5.  Else:","6.    print(age)"],
+    "text":["-10","1","-1","","0","10","","","True","","age","False","","","","\"age?\""], 
+    "textsize":[75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":450,
+    "startY":190.5,
+    "order":[14,13,9,5],
+    "row":4,
+    "col":4,
+    "start":14,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 55,
+    "textStartY": 170,
+    "textGap": 100,
+    "textStartX": 1380,
+    "Hint" : "The 'not' operator complements the operand",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

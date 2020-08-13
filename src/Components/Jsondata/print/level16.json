@@ -1,0 +1,22 @@
+{
+    "blocks":["0x5f8ec4","0x5f8ec4","0x5f8ec4","0xabb3be","0xabb3be","0x5f8ec4"],
+    "code":["right()","x=50","print(type(x))"],
+    "text":["type(50)","<class 'int'>","type 50","","","50"], 
+    "textsize":[49,45,49,50,50,50], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":400,
+    "startY":350.5,
+    "order":[3,4,1],
+    "row":3,
+    "col":2,
+    "start":3,
+    "scale":1.00,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "type() is used to get the data type of any variable",
+    "HintColor":"#c3144b",
+    "BorderColor":"0xFFFF00 "
+}

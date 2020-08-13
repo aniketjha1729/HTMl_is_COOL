@@ -1,0 +1,25 @@
+{
+    "blocks":["0xec7063","0xec7063","0x959da8","0xec7063","0x959da8","0xec7063"],
+    "code":["     a=1","     b=2","1.  up()","2.  While a+1<=2:","3.    a=a+1","4.    b=b+1","5.  print(b)"],
+    "text":["3","1","","2","","4"], 
+    "textsize":[85,85,85,85,85,85], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":550,
+    "startY":300.5,
+    "order":[4,2,0],
+    "row":2,
+    "col":3,
+    "start":4,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 200,
+    "textGap": 100,
+    "textStartX": 1300,
+    "Hint" : "A while loop repeatedly executes a set of statements as long as a condition is true",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}
+
+
+

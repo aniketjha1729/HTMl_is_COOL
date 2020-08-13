@@ -1,0 +1,22 @@
+{
+    "blocks":["0xec7063","0xec7063","0xabb3be","0xec7063","0xabb3be","0xabb3be"],
+    "code":["left()","up()","print('Hello %s' % 'World')"],
+    "text":["Hello World","Hello world","","'Hello World'","",""], 
+    "textsize":[48,48,48,48,48,48], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":480,
+    "startY":300.5,
+    "order":[5,4,2,0],
+    "row":2,
+    "col":3,
+    "start":5,
+    "scale":0.80,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "% is used to join words & integers, %s tells the position of the text ",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}

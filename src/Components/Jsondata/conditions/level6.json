@@ -1,0 +1,22 @@
+{
+    "blocks":["0xc64a4a","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0xc64a4a"],
+    "code":["     score=98","1.  down()","2.  If score>90:","3.    print(score)","4.  If score%2==0:","5.    print(\"score\")"],
+    "text":["score","","0","98","","Score"], 
+    "textsize":[85,85,85,85,85,85], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":380.5,
+    "order":[1,4,3,0],
+    "row":3,
+    "col":2,
+    "start":1,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 230,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "An if statement enables a program to conditionally execute certain instructions",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

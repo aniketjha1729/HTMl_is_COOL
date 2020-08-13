@@ -170,7 +170,7 @@ export default function IGLevel2() {
                                             {move === 6 ? <td className="codec"><b>up()</b></td> : <td className="code"><b>up()</b></td>}
                                         </tr>
                                         <tr>
-                                            {move === 7 ? <td className="codec"><b>left()</b></td> : <td className="code"><b>left()</b></td>}
+                                            {move === 7 ? <td className="codec"><b>right()</b></td> : <td className="code"><b>right()</b></td>}
                                         </tr>
                                     </tbody>
                                 </table>

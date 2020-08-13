@@ -1,0 +1,22 @@
+{
+    "blocks":["0xec7063","0xabb3be","0xec7063","0xec7063","0xabb3be","0xabb3be"],
+    "code":["left()","up()","y=90.9","print(type(y))"],
+    "text":["<class 'float'>","","type(y)","90.9","",""], 
+    "textsize":[41,43,47,48,50,50], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":400,
+    "startY":350.5,
+    "order":[5,4,1,0],
+    "row":3,
+    "col":2,
+    "start":5,
+    "scale":1.00,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "type() is used to get the data type of any variable",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}

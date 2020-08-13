@@ -28,6 +28,8 @@ import CLevel16 from './Components/Conditions/Levels/CLevel16';
 import CLevel17 from './Components/Conditions/Levels/CLevel17'; 
 import CLevel18 from './Components/Conditions/Levels/CLevel18'; 
 import CLevel19 from './Components/Conditions/Levels/CLevel19'; 
+import Data from './Components/Jsondata/Data';
+
 
 
 export default function App() {
@@ -36,12 +38,10 @@ export default function App() {
         <Switch>
           <Route exact path="/" exact component={Welcome} />
 
-          
           <Route exact path="/introtogamelevel1" exact component={IGLevel1} />
           <Route exact path="/introtogamelevel2" exact component={IGLevel2} />
           <Route exact path="/introtogamelevel3" exact component={IGLevel3} />
 
-          
           <Route exact path="/conditionlevel1" exact component={CLevel1} />
           <Route exact path="/conditionlevel2" exact component={CLevel2} />
           <Route exact path="/conditionlevel3" exact component={CLevel3} />
@@ -61,6 +61,7 @@ export default function App() {
           <Route exact path="/conditionlevel17" exact component={CLevel17} />
           <Route exact path="/conditionlevel18" exact component={CLevel18} />
           <Route exact path="/conditionlevel19" exact component={CLevel19} />
+          <Route exact path="/data" exact component={Data} />
         </Switch>
       </BrowserRouter>
   )

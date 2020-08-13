@@ -1,0 +1,23 @@
+{
+    "blocks":["0xabb3be","0xabb3be","0xec7063","0xec7063","0xabb3be","0xec7063"],
+    "code":["right()","down()","print(\"A\")"],
+    "text":["","","a","A","","\"A\""], 
+    "textsize":[65,65,65,65,65,65], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":550.5,
+    "order":[0,1,4,3],
+    "row":3,
+    "col":2,
+    "start":0,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 400,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "Basics of print statement",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}
+
