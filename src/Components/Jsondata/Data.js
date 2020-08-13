@@ -3,20 +3,29 @@ import React,{useEffect,useState} from 'react'
 import PostData from "./print/level1.json"
 import "../IntroToGame/css/Level.css"
 import { Link, useHistory } from 'react-router-dom'
+import useSound from "use-sound"
+import step from '../audio/step.mp3'
+import right from '../audio/right1.mp3'
+import wrong from '../audio/wrong1.mp3'
+import swal from "sweetalert"
+
 export default function Data() {
     const { blocks,code,text,textsize, textcolor, startX,
-            startY,row,col,start,scale,ballScale,
+            startY,order,row,col,start,scale,ballScale,
             fontSize,textStartY,textGap,textStartX,
-            Hint,HintColor,BorderColor}=PostData;
+            Hint,HintColor,BorderColor
+        }=PostData;
     
+    const [move, setMove] = useState(0)
+    const [stepActive] = useSound(step)
+    const [rightActive] = useSound(right);
+    const [wrongActive] = useSound(wrong);
+
     var textdata=0;
     const myf1=()=>{
         textdata++;   
     }
 
-    const cevent=()=>{
-        console.log("helo")
-    }
     const blockColor=[]
     blocks.map((blocks,index)=>{
         blockColor.push(blocks.replace(/0x/,"#"))
@@ -29,6 +38,12 @@ export default function Data() {
     var columns=[];
     for(var i=0;i<col;i++){
         columns.push(i)
+    }
+    
+    const nextstep=(e)=>{
+        if (e.target.id === "1") {
+            stepActive();
+        }  
     }
     
     return (
@@ -52,8 +67,8 @@ export default function Data() {
                                     <tbody>
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
-                                                return <td onClick={cevent} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
-                                                    {text[textdata]}
+                                                return <td id={textdata}  onClick={nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
+                                                    <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
                                             })}</tr>
