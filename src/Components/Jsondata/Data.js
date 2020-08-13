@@ -55,7 +55,7 @@ export default function Data() {
                                         {columns.map((tablerow,tablerowindex)=>{
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn,tablecolumnindex)=>{
                                                 return <td key={tablecolumnindex} className="block">
-                                                    {text[0]}
+                                                    {text[2]}
                                                 </td>
                                             })}</tr>
                                         })}
