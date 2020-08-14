@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React,{useEffect,useState} from 'react'
-import PostData from "./print/level15.json"
+import PostData from "./print/level1.json"
 import "../IntroToGame/css/Level.css"
 import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
@@ -42,14 +42,16 @@ export default function Data() {
     }
 
     var score=[];
+    
     for(var i=0;i<order.length-1;i++){
-        score.push(i)
+        score.push(i+1)
     }
     const firststep=(e)=>{
         if ((e.target.id === order[currentstep].toString() && move===0)){
             setCurrentstep(currentstep+1)
             setMove(move+1)
-            console.log(score)
+            console.log("score",score)
+            console.log("move",move)
             stepActive();  
         }
     }
@@ -57,9 +59,10 @@ export default function Data() {
         if ((e.target.id === order[currentstep].toString())) {
             setCurrentstep(currentstep + 1)
             setMove(move + 1)
-            console.log(move)
+            console.log("move",move)
+            
             // console.log(order.length)
-            if(move===(order.length)-2){
+            if((move)===score[(score.length)-2]){
                 rightActive();
                 swal("Good job!", " ", "success")
             }else{
@@ -74,15 +77,30 @@ export default function Data() {
         <div>
             <div id="myid" className="container">
                 <br /><br />
-                <div className="row ">
-                    <div className="col">
-                        <Link to="/">
-                            <div className="nextGame">
-                                <button type="button" className="btn btn-success btn-lg">Next</button>
-                            </div>
-                        </Link>
+                {move === score[(score.length)-1] ?
+                    <div className="row ">
+                        <div className="col">
+                            <button type="button" className="btn btn-primary btn-lg">Score:{move}</button>
+                            <Link to="/introtogamelevel2">
+                                <div className="nextGame">
+                                      <button type="button" className="btn btn-success btn-lg">Next</button>
+                                </div>
+                            </Link>
+                        </div>
+                    </div> :
+
+                    <div className="row ">
+                        <div className="col">
+                            <button type="button" className="btn btn-primary btn-lg">Score:{move}</button>
+                            <Link to="/">
+                                <div className="nextGame">
+                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
-                </div>
+
+                }
                 <div className="row">
                     <div className="col-6">
                         <div className="blockgame">
@@ -92,7 +110,7 @@ export default function Data() {
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
                                                 return <td id={textdata}  onClick={textdata===order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
-                                                    {textdata === start? <div className="blink" id="blink"></div> : ''}
+                                                    {((textdata === start))? <div className="blink" id="blink"></div> : ''}
                                                     <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
@@ -108,9 +126,6 @@ export default function Data() {
                             <div className="container">
                                 <table className="codes">
                                     <tbody>
-                                        <tr>
-                                            <td>Score:{move}</td>
-                                        </tr>
                                         {code.map((codedata, codedataindex) => {
                                             return <tr key={codedataindex}>
                                                 <td className="code">{codedata}</td>
@@ -123,7 +138,7 @@ export default function Data() {
                     </div>
                 </div><br /><br />
                 <div className="footer">
-                    Click on square blocks as per instructions given on right side.
+                    {Hint}
                 </div>
             </div>
         </div>
