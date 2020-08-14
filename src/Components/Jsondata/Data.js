@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React,{useEffect,useState} from 'react'
-import PostData from "./print/level1.json"
+import PostData from "./print/level15.json"
 import "../IntroToGame/css/Level.css"
 import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
@@ -17,13 +17,14 @@ export default function Data() {
         }=PostData;
     
     const [move, setMove] = useState(0)
+    const [currentstep, setCurrentstep] = useState(1)
     const [stepActive] = useSound(step)
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
 
     var textdata=0;
     const myf1=()=>{
-        textdata++;   
+        textdata++;    
     }
 
     const blockColor=[]
@@ -39,11 +40,27 @@ export default function Data() {
     for(var i=0;i<col;i++){
         columns.push(i)
     }
-    
+
+    var score=[];
+    for(var i=0;i<order.length-1;i++){
+        score.push(i)
+    }
+    const firststep=(e)=>{
+        if ((e.target.id === order[currentstep].toString() && move===0)){
+            setCurrentstep(currentstep+1)
+            setMove(move+1)
+            console.log(score)
+            stepActive();  
+        }
+    }
     const nextstep=(e)=>{
-        if (e.target.id === "1") {
+        if ((e.target.id === order[currentstep].toString())) {
+            setCurrentstep(currentstep + 1)
+            setMove(move + 1)
             stepActive();
-        }  
+        }else{
+            wrongActive();
+        }
     }
     
     return (
@@ -67,7 +84,8 @@ export default function Data() {
                                     <tbody>
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
-                                                return <td id={textdata}  onClick={nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
+                                                return <td id={textdata}  onClick={textdata===order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
+                                                    {textdata === start? <div className="blink" id="blink"></div> : ''}
                                                     <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
@@ -83,6 +101,7 @@ export default function Data() {
                             <div className="container">
                                 <table className="codes">
                                     <tbody>
+                                        <tr>Score:{move}</tr>
                                         {code.map((codedata, codedataindex) => {
                                             return <tr key={codedataindex}>
                                                 <td className="code">{codedata}</td>
