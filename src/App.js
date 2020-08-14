@@ -27,8 +27,16 @@ import CLevel15 from './Components/Conditions/Levels/CLevel15';
 import CLevel16 from './Components/Conditions/Levels/CLevel16'; 
 import CLevel17 from './Components/Conditions/Levels/CLevel17'; 
 import CLevel18 from './Components/Conditions/Levels/CLevel18'; 
-import CLevel19 from './Components/Conditions/Levels/CLevel19'; 
-import Data from './Components/Jsondata/Data';
+import CLevel19 from './Components/Conditions/Levels/CLevel19';
+
+import PLevel1 from './Components/Jsondata/print/Levels/PLevel1';
+import PLevel2 from './Components/Jsondata/print/Levels/PLevel2';
+import PLevel3 from './Components/Jsondata/print/Levels/PLevel3';
+import PLevel4 from './Components/Jsondata/print/Levels/PLevel4';
+import PLevel5 from './Components/Jsondata/print/Levels/PLevel5';
+import PLevel6 from './Components/Jsondata/print/Levels/PLevel6';
+import PLevel7 from './Components/Jsondata/print/Levels/PLevel7';
+
 
 
 
@@ -61,7 +69,14 @@ export default function App() {
           <Route exact path="/conditionlevel17" exact component={CLevel17} />
           <Route exact path="/conditionlevel18" exact component={CLevel18} />
           <Route exact path="/conditionlevel19" exact component={CLevel19} />
-          <Route exact path="/data" exact component={Data} />
+          
+          <Route exact path="/print/level1" exact component={PLevel1} />
+          <Route exact path="/print/level2" exact component={PLevel2} />
+          <Route exact path="/print/level3" exact component={PLevel3} />
+          <Route exact path="/print/level4" exact component={PLevel4} />
+          <Route exact path="/print/level5" exact component={PLevel5} />
+          <Route exact path="/print/level6" exact component={PLevel6} />
+          <Route exact path="/print/level7" exact component={PLevel7} />
         </Switch>
       </BrowserRouter>
   )
