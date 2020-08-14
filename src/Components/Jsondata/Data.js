@@ -57,7 +57,14 @@ export default function Data() {
         if ((e.target.id === order[currentstep].toString())) {
             setCurrentstep(currentstep + 1)
             setMove(move + 1)
-            stepActive();
+            console.log(move)
+            // console.log(order.length)
+            if(move===(order.length)-2){
+                rightActive();
+                swal("Good job!", " ", "success")
+            }else{
+                stepActive()
+            }
         }else{
             wrongActive();
         }
@@ -101,7 +108,9 @@ export default function Data() {
                             <div className="container">
                                 <table className="codes">
                                     <tbody>
-                                        <tr>Score:{move}</tr>
+                                        <tr>
+                                            <td>Score:{move}</td>
+                                        </tr>
                                         {code.map((codedata, codedataindex) => {
                                             return <tr key={codedataindex}>
                                                 <td className="code">{codedata}</td>
