@@ -137,3 +137,8 @@ body{
 	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
 	background-color: #D73814;
 }
+.correctans{
+    position: absolute;
+    margin-top:-17% !important;
+    border-color: #e9e9e9;
+}
