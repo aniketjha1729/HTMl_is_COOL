@@ -96,7 +96,7 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             <button type="button" className="btn btn-primary btn-lg btn3d">Score:{move}</button>
-                            <Link to="/print/level6">
+                            <Link to="/print/level5">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
@@ -114,7 +114,8 @@ export default function PLevel1() {
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
                                                 return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
-                                                    {((textdata === startIndex)) ? <div className="blink" id="blink"></div> : ''}
+                                                    {((textdata === order[move]) && textdata != order[order.length - 1]) ? <div className="blink" id="blink"></div> : ''}
+                                                    {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
                                                     <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>

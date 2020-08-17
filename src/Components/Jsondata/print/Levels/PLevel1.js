@@ -114,7 +114,8 @@ export default function PLevel1() {
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
                                                 return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
-                                                    {((textdata === startIndex)) ? <div className="blink" id="blink"></div> : ''}
+                                                    {((textdata === order[move]) && textdata!=order[order.length-1]) ? <div className="blink" id="blink"></div> : ''}
+                                                    {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
                                                     <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
