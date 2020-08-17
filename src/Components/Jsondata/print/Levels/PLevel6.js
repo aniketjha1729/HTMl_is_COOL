@@ -66,6 +66,7 @@ export default function PLevel1() {
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
                 swal("Good job!", " ", "success")
+                localStorage.setItem("finalScore", 6)
             } else {
                 stepActive()
             }
@@ -84,7 +85,7 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{move}</button>
+                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/print/level7">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
@@ -95,7 +96,7 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{move}</button>
+                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/print/level5">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
