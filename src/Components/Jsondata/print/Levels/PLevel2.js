@@ -15,7 +15,7 @@ export default function PLevel1() {
         fontSize, textStartY, textGap, textStartX,
         Hint, HintColor, BorderColor
     } = PostData;
-
+    const [startIndex, setstartIndex] = useState(start)
     const [move, setMove] = useState(0)
     const [currentstep, setCurrentstep] = useState(1)
     const [stepActive] = useSound(step)
@@ -53,6 +53,7 @@ export default function PLevel1() {
             console.log("score", score)
             console.log("move", move)
             stepActive();
+            setstartIndex(500000);
         }
     }
     const nextstep = (e) => {
@@ -70,6 +71,9 @@ export default function PLevel1() {
             }
         } else {
             wrongActive();
+            setstartIndex(start);
+            setMove(0);
+            setCurrentstep(1);
         }
     }
 
@@ -80,10 +84,10 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg">Score:{move}</button>
+                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{move}</button>
                             <Link to="/print/level3">
                                 <div className="nextGame">
-                                    <button type="button" className="btn btn-success btn-lg">Next</button>
+                                    <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
                                 </div>
                             </Link>
                         </div>
@@ -91,10 +95,10 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg">Score:{move}</button>
+                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{move}</button>
                             <Link to="/print/level1">
                                 <div className="nextGame">
-                                    <button type="button" className="btn btn-danger btn-lg">Back</button>
+                                    <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
                             </Link>
                         </div>
@@ -110,7 +114,7 @@ export default function PLevel1() {
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
                                                 return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px" }}>
-                                                    {((textdata === start)) ? <div className="blink" id="blink"></div> : ''}
+                                                    {((textdata === startIndex)) ? <div className="blink" id="blink"></div> : ''}
                                                     <div className="text"><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
