@@ -1,9 +1,9 @@
 /* eslint-disable */
 import React, { useState } from 'react'
-import "./css/Level7z.css";
+import "./css/Level.css";
 import useSound from "use-sound";
-import right from "./audio/right1.mp3"
-import wrong from "./audio/wrong1.mp3"
+import right from "../../Components/audio/right1.mp3"
+import wrong from "../../Components/audio/wrong1.mp3"
 import swal from "sweetalert";
 
 export default function Level2() {

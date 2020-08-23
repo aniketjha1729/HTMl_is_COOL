@@ -14,6 +14,7 @@ import PLevel7 from './Components/Jsondata/print/Levels/PLevel7';
 
 
 
+
 export default function App() {
   return (
       <BrowserRouter>
@@ -27,6 +28,7 @@ export default function App() {
           <Route exact path="/print/level5" exact component={PLevel5} />
           <Route exact path="/print/level6" exact component={PLevel6} />
           <Route exact path="/print/level7" exact component={PLevel7} />
+          
         </Switch>
       </BrowserRouter>
   )

@@ -50,8 +50,6 @@ export default function PLevel1() {
         if ((e.target.id === order[currentstep].toString() && move === 0)) {
             setCurrentstep(currentstep + 1)
             setMove(move + 1)
-            console.log("score", score)
-            console.log("move", move)
             stepActive();
             setstartIndex(500000);
         }
@@ -60,9 +58,6 @@ export default function PLevel1() {
         if ((e.target.id === order[currentstep].toString())) {
             setCurrentstep(currentstep + 1)
             setMove(move + 1)
-            console.log("move", move)
-
-            // console.log(order.length)
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
                 swal("Good job!", " ", "success")
@@ -114,10 +109,10 @@ export default function PLevel1() {
                                     <tbody>
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
-                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '80px', height: "80px", borderRadius: "10px", position: "relative"  }}>
+                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} className="btn3d" style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px", position: "relative"  }}>
                                                     {((textdata === order[move]) && textdata != order[order.length - 1]) ? <div className="blink" id="blink"></div> : ''}
                                                     {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
-                                                    <div className="text"><b>{text[textdata]}</b></div>
+                                                    <div className="text" style={{ width: "10px" }}><b>{text[textdata]}</b></div>
                                                     {myf1()}
                                                 </td>
                                             })}</tr>
