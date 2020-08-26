@@ -82,8 +82,8 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/level2">
+                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                            <Link to="/print/plevel2">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
                                 </div>
@@ -93,8 +93,8 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/level1">
+                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                            <Link to="/print/plevel1">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>

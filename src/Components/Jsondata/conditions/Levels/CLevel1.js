@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import PostData from "../data/level6.json"
+import PostData from "../data/level1.json"
 import "../css/Level.css"
 import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
@@ -15,6 +15,7 @@ export default function PLevel1() {
         fontSize, textStartY, textGap, textStartX,
         Hint, HintColor, BorderColor
     } = PostData;
+    
     const [startIndex, setstartIndex] = useState(start)
     const [move, setMove] = useState(0)
     const [currentstep, setCurrentstep] = useState(1)
@@ -61,7 +62,7 @@ export default function PLevel1() {
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
                 swal("Good job!", " ", "success")
-                localStorage.setItem("finalScore", 6)
+                localStorage.setItem("finalScore", 1)
             } else {
                 stepActive()
             }
@@ -81,8 +82,8 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/plevel7">
+                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                            <Link to="/condtions/clevel2">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
                                 </div>
@@ -92,8 +93,8 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/plevel5">
+                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                            <Link to="/">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
@@ -110,8 +111,8 @@ export default function PLevel1() {
                                     <tbody>
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
-                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} className="btn3d" key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px", position: "relative", textAlign: "center"  }}>
-                                                    {((textdata === order[move]) && textdata != order[order.length - 1]) ? <div className="blink" id="blink"></div> : ''}
+                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} className="btn3d" style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px",position:"relative",textAlign:"center" }}>
+                                                    {((textdata === order[move]) && textdata!=order[order.length-1]) ? <div className="blink" id="blink"></div> : ''}
                                                     {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
                                                     {text[textdata]}
                                                     {myf1()}

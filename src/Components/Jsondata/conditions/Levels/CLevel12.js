@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import PostData from "../data/level6.json"
+import PostData from "../data/level12.json"
 import "../css/Level.css"
 import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
@@ -36,13 +36,13 @@ export default function PLevel1() {
     for (var i = 0; i < row; i++) {
         rows.push(i);
     }
+
     var columns = [];
     for (var i = 0; i < col; i++) {
         columns.push(i)
     }
 
     var score = [];
-
     for (var i = 0; i < order.length - 1; i++) {
         score.push(i + 1)
     }
@@ -60,8 +60,8 @@ export default function PLevel1() {
             setMove(move + 1)
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
-                swal("Good job!", " ", "success")
-                localStorage.setItem("finalScore", 6)
+                swal("Good job!", " ", "success");
+                localStorage.setItem("finalScore", 7)
             } else {
                 stepActive()
             }
@@ -82,7 +82,7 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/plevel7">
+                            <Link to="/condtions/clevel13">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
                                 </div>
@@ -93,7 +93,7 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/plevel5">
+                            <Link to="/condtions/clevel11">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
@@ -110,7 +110,7 @@ export default function PLevel1() {
                                     <tbody>
                                         {columns.map((tablerow, tablerowindex) => {
                                             return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
-                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} className="btn3d" key={tablecolumnindex} style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px", position: "relative", textAlign: "center"  }}>
+                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} className="btn3d" style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px", position: "relative", textAlign: "center" }}>
                                                     {((textdata === order[move]) && textdata != order[order.length - 1]) ? <div className="blink" id="blink"></div> : ''}
                                                     {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
                                                     {text[textdata]}

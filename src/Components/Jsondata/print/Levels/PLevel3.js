@@ -82,7 +82,7 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/level4">
+                            <Link to="/print/plevel4">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
                                 </div>
@@ -93,7 +93,7 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
-                            <Link to="/print/level2">
+                            <Link to="/print/plevel2">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
