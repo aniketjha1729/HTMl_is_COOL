@@ -100,7 +100,6 @@ export default function PLevel1() {
                             </Link>
                         </div>
                     </div>
-
                 }
                 <div className="row">
                     <div className="col-6">
@@ -125,7 +124,7 @@ export default function PLevel1() {
                     </div>
                     <div className="col-6">
                         <div>
-                            <div className="container">
+                            <div className="container" style={{ whiteSpace: "pre-wrap" }}>
                                 <table className="codes">
                                     <tbody>
                                         {code.map((codedata, codedataindex) => {

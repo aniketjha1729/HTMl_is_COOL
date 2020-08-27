@@ -23,6 +23,27 @@ export default function PLevel1() {
     const [rightActive] = useSound(right);
     const [wrongActive] = useSound(wrong);
 
+    // useEffect(() => {
+    //     code.map((code, index) => {
+    //         var tempstr = code.split(" ").join("&nbsp;");
+    //         console.log(tempstr)
+    //     })
+    // }, [])
+
+    var codedata=[];
+    code.map((code, index) => {
+        var tempstr = code.split(" ").join("&nbsp;");
+        codedata.push(tempstr)
+    })
+    console.log(codedata)
+
+    var sct=[];
+    codedata.map((codedat,index)=>{
+        sct.push(codedat.replace(/&nbsp;/gi, " "));
+
+    })
+
+
     var textdata = 0;
     const myf1 = () => {
         textdata++;
@@ -32,6 +53,8 @@ export default function PLevel1() {
     blocks.map((blocks, index) => {
         blockColor.push(blocks.replace(/0x/, "#"))
     })
+
+    
 
     var rows = [];
     for (var i = 0; i < row; i++) {
@@ -82,7 +105,6 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/condtions/clevel2">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
@@ -93,7 +115,6 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
@@ -126,12 +147,12 @@ export default function PLevel1() {
                     </div>
                     <div className="col-6">
                         <div>
-                            <div className="container">
+                            <div className="container" style={{ whiteSpace: "pre-wrap"}}>
                                 <table className="codes">
                                     <tbody>
-                                        {code.map((codedata, codedataindex) => {
+                                        {code.map((sctdata, codedataindex) => {
                                             return <tr key={codedataindex}>
-                                                <td className="code">{codedata}</td>
+                                               <td className="code">{sctdata}</td>
                                             </tr>
                                         })}
                                     </tbody>
@@ -139,7 +160,12 @@ export default function PLevel1() {
                             </div>
                         </div>
                     </div>
-                </div><br /><br />
+                </div>
+                <div className="row">
+                    <div className="col mysocre">
+                        <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                    </div>
+                </div>
                 <div className="footer">
                     {Hint}
                 </div>

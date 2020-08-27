@@ -81,7 +81,6 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/condtions/clevel13">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
@@ -92,7 +91,6 @@ export default function PLevel1() {
 
                     <div className="row ">
                         <div className="col">
-                            <button type="button" className="btn btn-primary btn-lg btn3d">Score:{localStorage.getItem("finalScore")}</button>
                             <Link to="/condtions/clevel11">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
@@ -125,7 +123,7 @@ export default function PLevel1() {
                     </div>
                     <div className="col-6">
                         <div>
-                            <div className="container">
+                            <div className="container" style={{ whiteSpace: "pre-wrap" }}>
                                 <table className="codes">
                                     <tbody>
                                         {code.map((codedata, codedataindex) => {
@@ -138,7 +136,12 @@ export default function PLevel1() {
                             </div>
                         </div>
                     </div>
-                </div><br /><br />
+                </div>
+                <div className="row">
+                    <div className="col mysocre">
+                        <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                    </div>
+                </div>
                 <div className="footer">
                     {Hint}
                 </div>
