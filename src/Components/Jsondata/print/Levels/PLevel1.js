@@ -1,8 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import PostData from "../data/level1.json"
 import "../css/Level.css"
-import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
 import step from '../../../audio/step.mp3'
 import right from '../../../audio/right1.mp3'
@@ -10,6 +8,19 @@ import wrong from '../../../audio/wrong1.mp3'
 import swal from "sweetalert"
 
 export default function PLevel1() {
+    const [myfiles, setMyfiles] = useState(`level1.json`)
+    const [currentscore, setCurrentscore] = useState(0)
+    localStorage.setItem("finalScore", currentscore)
+    const [level, setLevel] = useState(2)
+    const changelevel = () => {
+        setLevel(level + 1);
+        var templevel = level.toString();
+        console.log(templevel)
+        setMyfiles(`level${templevel}.json`)
+        setMove(0)
+        setCurrentstep(1)
+    }
+    const PostData = require(`../data/${myfiles}`)
     const { blocks, code, text, textsize, textcolor, startX,
         startY, order, row, col, start, scale, ballScale,
         fontSize, textStartY, textGap, textStartX,
@@ -62,7 +73,8 @@ export default function PLevel1() {
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
                 swal("Good job!", " ", "success")
-                localStorage.setItem("finalScore", 1)
+                setCurrentscore(currentscore + 1)
+                localStorage.setItem("finalScore", currentscore)
             } else {
                 stepActive()
             }
@@ -83,21 +95,21 @@ export default function PLevel1() {
                     <div className="row ">
                         <div className="col">
                             
-                            <Link to="/print/plevel2">
+                            
                                 <div className="nextGame">
-                                    <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
+                                <button type="button" className="btn btn-success btn-lg btn3d" onClick={changelevel}>Next</button>
                                 </div>
-                            </Link>
+                            
                         </div>
                     </div> :
                     <div className="row ">
                         <div className="col">
                             
-                            <Link to="/print/plevel1">
+                            
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
-                            </Link>
+                            
                         </div>
                     </div>
 

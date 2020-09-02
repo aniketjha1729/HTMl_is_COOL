@@ -12,7 +12,7 @@ export default function Welcome() {
                         <div className="card-body">
                             <h5 className="card-title">Print Game</h5>
                             <p className="card-text">Print Game</p>
-                            <Link to="/print/plevel1">
+                            <Link to="/print">
                                 <button type="button" className="btn btn-primary">Start</button>
                             </Link>
                         </div>
@@ -23,7 +23,7 @@ export default function Welcome() {
                         <div className="card-body">
                             <h5 className="card-title">Games:Condition</h5>
                             <p className="card-text">Condition Games</p>
-                            <Link to="/condtions/clevel1">
+                            <Link to="/conditions">
                                 <button type="button" className="btn btn-primary">Start</button>
                             </Link>
                         </div>

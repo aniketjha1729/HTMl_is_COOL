@@ -1,15 +1,30 @@
 /* eslint-disable */
-import React, { useEffect, useState } from 'react'
-import PostData from "../data/level1.json"
+import React, { useState } from 'react'
 import "../css/Level.css"
-import { Link, useHistory } from 'react-router-dom'
 import useSound from "use-sound"
 import step from '../../../audio/step.mp3'
 import right from '../../../audio/right1.mp3'
 import wrong from '../../../audio/wrong1.mp3'
 import swal from "sweetalert"
 
-export default function PLevel1() {
+
+
+export default function CLevel1() {
+    const [myfiles, setMyfiles] = useState(`level1.json`)
+    const [currentscore, setCurrentscore] = useState(0)
+    localStorage.setItem("finalScore", currentscore)
+    const [level, setLevel] = useState(2)
+    const changelevel=()=>{
+        setLevel(level+1);
+        var templevel=level.toString();
+        console.log(templevel)
+        setMyfiles(`level${templevel}.json`)
+        setMove(0)
+        setCurrentstep(1)
+    }
+    
+    const PostData = require(`../data/${myfiles}`)
+    
     const { blocks, code, text, textsize, textcolor, startX,
         startY, order, row, col, start, scale, ballScale,
         fontSize, textStartY, textGap, textStartX,
@@ -20,30 +35,10 @@ export default function PLevel1() {
     const [move, setMove] = useState(0)
     const [currentstep, setCurrentstep] = useState(1)
     const [stepActive] = useSound(step)
-    const [rightActive] = useSound(right);
-    const [wrongActive] = useSound(wrong);
+    const [rightActive] = useSound(right)
+    const [wrongActive] = useSound(wrong)
 
-    // useEffect(() => {
-    //     code.map((code, index) => {
-    //         var tempstr = code.split(" ").join("&nbsp;");
-    //         console.log(tempstr)
-    //     })
-    // }, [])
-
-    var codedata=[];
-    code.map((code, index) => {
-        var tempstr = code.split(" ").join("&nbsp;");
-        codedata.push(tempstr)
-    })
-    console.log(codedata)
-
-    var sct=[];
-    codedata.map((codedat,index)=>{
-        sct.push(codedat.replace(/&nbsp;/gi, " "));
-
-    })
-
-
+    
     var textdata = 0;
     const myf1 = () => {
         textdata++;
@@ -53,8 +48,6 @@ export default function PLevel1() {
     blocks.map((blocks, index) => {
         blockColor.push(blocks.replace(/0x/, "#"))
     })
-
-    
 
     var rows = [];
     for (var i = 0; i < row; i++) {
@@ -66,7 +59,6 @@ export default function PLevel1() {
     }
 
     var score = [];
-
     for (var i = 0; i < order.length - 1; i++) {
         score.push(i + 1)
     }
@@ -85,7 +77,8 @@ export default function PLevel1() {
             if ((move) === score[(score.length) - 2]) {
                 rightActive();
                 swal("Good job!", " ", "success")
-                localStorage.setItem("finalScore", 1)
+                setCurrentscore(currentscore + 1)
+                localStorage.setItem("finalScore", currentscore)
             } else {
                 stepActive()
             }
@@ -98,6 +91,7 @@ export default function PLevel1() {
         }
     }
 
+    
     return (
         <div>
             <div id="myid" className="container">
@@ -105,25 +99,21 @@ export default function PLevel1() {
                 {move === score[(score.length) - 1] ?
                     <div className="row ">
                         <div className="col">
-                            <Link to="/condtions/clevel2">
                                 <div className="nextGame">
-                                    <button type="button" className="btn btn-success btn-lg btn3d">Next</button>
+                                <button type="button" className="btn btn-success btn-lg btn3d" onClick={changelevel}>Next</button>
                                 </div>
-                            </Link>
                         </div>
                     </div> :
-
                     <div className="row ">
                         <div className="col">
-                            <Link to="/">
                                 <div className="nextGame">
                                     <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
                                 </div>
-                            </Link>
                         </div>
                     </div>
 
                 }
+                
                 <div className="row">
                     <div className="col-6">
                         <div className="blockgame">
