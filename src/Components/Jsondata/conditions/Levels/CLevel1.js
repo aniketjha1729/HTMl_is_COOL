@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react'
+import KeyboardEventHandler from 'react-keyboard-event-handler';
 import "../css/Level.css"
 import useSound from "use-sound"
 import step from '../../../audio/step.mp3'
@@ -8,30 +9,29 @@ import wrong from '../../../audio/wrong1.mp3'
 import swal from "sweetalert"
 
 
-
 export default function CLevel1() {
     const [myfiles, setMyfiles] = useState(`level1.json`)
     const [currentscore, setCurrentscore] = useState(0)
+    
+    const [keyCurrentStep, setKeyCurrentStep] = useState(1)
     localStorage.setItem("finalScore", currentscore)
     const [level, setLevel] = useState(2)
+
     const changelevel=()=>{
+        setKeyCurrentStep(1)
+        setKeyCurrentStage(start)
         setLevel(level+1);
         var templevel=level.toString();
-        console.log(templevel)
         setMyfiles(`level${templevel}.json`)
         setMove(0)
         setCurrentstep(1)
     }
     
     const PostData = require(`../data/${myfiles}`)
-    
-    const { blocks, code, text, textsize, textcolor, startX,
-        startY, order, row, col, start, scale, ballScale,
-        fontSize, textStartY, textGap, textStartX,
-        Hint, HintColor, BorderColor
-    } = PostData;
+    const { blocks, code, text, order, row, col, start, Hint} = PostData;
     
     const [startIndex, setstartIndex] = useState(start)
+    const [keyCurrentStage, setKeyCurrentStage] = useState(start)
     const [move, setMove] = useState(0)
     const [currentstep, setCurrentstep] = useState(1)
     const [stepActive] = useSound(step)
@@ -67,9 +67,9 @@ export default function CLevel1() {
             setCurrentstep(currentstep + 1)
             setMove(move + 1)
             stepActive();
-            setstartIndex(500000);
         }
     }
+
     const nextstep = (e) => {
         if ((e.target.id === order[currentstep].toString())) {
             setCurrentstep(currentstep + 1)
@@ -80,7 +80,7 @@ export default function CLevel1() {
                 setCurrentscore(currentscore + 1)
                 localStorage.setItem("finalScore", currentscore)
             } else {
-                stepActive()
+                stepActive();
             }
         } else {
             wrongActive();
@@ -90,10 +90,48 @@ export default function CLevel1() {
             swal("Wrong Path!", "Start Again!", "warning");
         }
     }
+    
+    var keynum=0
+    const keyfunction=(key,e)=>{
+        if (key === "right") {
+            var keynum = keyCurrentStage+1
+        } else if (key === "left") {
+            var keynum = keyCurrentStage - 1
+        } else if (key === "up") {
+            var keynum = keyCurrentStage - rows.length;
+        } else if (key === "down") {
+            var keynum = keyCurrentStage +  rows.length;
+        }
+        
+        if (keynum === order[keyCurrentStep]){
+            setKeyCurrentStep(keyCurrentStep + 1)
+            setKeyCurrentStage(keynum)
+            setMove(move + 1)
+            if ((move) === score[(score.length) - 2]) {
+                rightActive();
+                swal("Good job!", " ", "success")
+                setCurrentscore(currentscore + 1)
+                localStorage.setItem("finalScore", currentscore)
+            } else {
+                stepActive();
+            }
+        } else {
+            wrongActive();
+            setKeyCurrentStage(start)
+            setMove(0);
+            setKeyCurrentStep(1);
+            swal("Wrong Path!", "Start Again!", "warning");
+        }
+    }
+
+    const ComponentA = () => (<div>
+        <KeyboardEventHandler handleKeys={['all']} onKeyEvent={keyfunction} />
+    </div>)
 
     
     return (
         <div>
+            <ComponentA/>
             <div id="myid" className="container">
                 <br /><br />
                 {move === score[(score.length) - 1] ?
