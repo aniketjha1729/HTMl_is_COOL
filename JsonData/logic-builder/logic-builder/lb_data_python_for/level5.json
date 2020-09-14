@@ -1,0 +1,22 @@
+{
+    "blocks":["0xec7063","0xec7063", "0xec7063","0xec7063", "0xec7063", "0xec7063", "0xec7063","0xec7063", "0xec7063"],
+    "code":["for ( start i = 3 ; i < 7 ; increase by 1 ) {","         print(i)","}"],
+    "text":["0","6","5","2","8","4","8","9","3"], 
+    "textsize":[60,60,60,60,60,60,60,60,60], 
+    "textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":350,
+    "order":[8,5,2,1],
+    "row":3,
+    "col":3,
+    "start":8,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 350,
+    "textGap": 90,
+    "textStartX": 1150,
+    "Hint" : "",
+    "HintColor":"#ffffff",
+    "BorderColor":"0xFFFF00 "
+}

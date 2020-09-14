@@ -1,0 +1,22 @@
+{
+    "blocks":["0x5f8ec4","0xabb3be","0x5f8ec4","0x5f8ec4","0xabb3be","0xabb3be","0x5f8ec4","0x5f8ec4","0xabb3be"],
+    "code":["up()","left()","up()","print('Rs.%d' % 10)"],
+    "text":["Rs.10","","Rs.%d10","Rs 10","","","'Rs.10'","'Rs.d10'",""], 
+    "textsize":[65,62,60,65,65,61,63,62,62], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":300.5,
+    "order":[8,5,4,1,0],
+    "row":3,
+    "col":3,
+    "start":8,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "% is used to join words & integers, %d tells the position of the text ",
+    "HintColor":"#c3144b",
+    "BorderColor":"0xFFFF00 "
+}

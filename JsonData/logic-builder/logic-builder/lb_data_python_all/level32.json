@@ -1,0 +1,19 @@
+{
+    "blocks":["0xffa600","0xe5e5e5","0xe5e5e5","0x29cbd3","0x29cbd3","0xffa600","0xffa600","0xe5e5e5","0xe5e5e5","0x29cbd3","0x29cbd3","0x29cbd3","0xffa600","0xffa600","0xffa600","0xe5e5e5"],
+    "code":["repeat (9) {","       if        {","             left()","       }  else  if       {","              down()","       }  else {","              up()","       }","} "],
+    "startX":550,
+    "startY":300,
+    "order":[2,14,13,12,15,11,15,11,15,11],
+    "row":4,
+    "col":4,
+    "start":2,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 45,
+    "textStartY": 200,
+    "textGap": 90,
+    "textStartX": 1300,
+    "color":["0xffa600","0x29cbd3"],
+    "ifcross":[false],
+    "ifBoxPos":[1445,1570]
+}

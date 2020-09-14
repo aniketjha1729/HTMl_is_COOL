@@ -1,0 +1,16 @@
+{
+    "blocks":["0x5499c7","0xec7063","0x5499c7","0xec7063","0xec7063","0xec7063"],
+    "code":["right()","down()","left()","down()"],
+    "startX":600,
+    "startY":300,
+    "order":[0,1,3,2,4],
+    "row":2,
+    "col":3,
+    "start":0,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 200,
+    "textGap": 100,
+    "textStartX": 1300
+}

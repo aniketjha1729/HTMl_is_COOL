@@ -1,0 +1,20 @@
+{
+    "blocks":["0x454545","0xe83878","0x454545","0xe83878","0xb6d82a","0xe83878","0x454545","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe83878","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0x454545","0xe83878","0x454545"],
+    "code":["function road () {","      right()","      right()","      if       { ","            bypass()","      }  else  {","             road()","      } ","} ","function  bypass () {","      down()","      down()","      right()","      right()","}","road()"],
+    "startX":300,
+    "startY":350,
+    "order":[0,1,2,3,4,11,18,19,20],
+    "row":7,
+    "col":3,
+    "start":0,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 40,
+    "textStartY":75,
+    "textGap": 63,
+    "textStartX": 1400,
+    "color":["0xb6d82a"],
+    "ifcross":[false],
+    "ifBoxPos":[1515]
+
+}

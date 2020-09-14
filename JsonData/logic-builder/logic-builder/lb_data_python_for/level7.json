@@ -1,0 +1,22 @@
+{
+    "blocks":["0x21618C","0xf336b", "0x21618C","0x21618C","0xf336b", "0x21618C","0x21618C","0xf336b", "0x21618C"],
+    "code":["for ( start i = 50 ; i <= 250 ; increase by 50 ) {","         print(i)","}"],
+    "text":["300","150","200","50","100","250","155","85","135"], 
+    "textsize":[60,60,60,60,60,60,60,60,60], 
+    "textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":350,
+    "order":[3,4,1,2,5],
+    "row":3,
+    "col":3,
+    "start":3,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 350,
+    "textGap": 90,
+    "textStartX": 1150,
+    "Hint" : "",
+    "HintColor":"#ffffff",
+    "BorderColor":"0xFFFF00 "
+}

@@ -1,0 +1,20 @@
+{
+    "blocks":["0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe83878","0xe83878","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe83878","0xe83878","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe83878","0xe83878","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5"],
+    "code":["function ping () {","       repeat (4) { ","             left()","        }","}","function pong () {","       repeat  (4) { ","             right()","        }","}","repeat  (3) {","       ping()","       pong()","}"],
+    "startX":400,
+    "startY":130,
+    "order":[19,18,17,16,15,16,17,18,19,18,17,16,15,16,17,18,19,18,17,16,15,16,17,18,19],
+    "row":7,
+    "col":7,
+    "start":19,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 40,
+    "textStartY":75,
+    "textGap": 70,
+    "textStartX": 1480,
+    "color":["0xffa60"],
+    "ifcross":[true],
+    "ifBoxPos":[1630]
+
+}

@@ -1,0 +1,22 @@
+{
+    "blocks":["0xc64a4a","0xc64a4a","0xc64a4a","0x959da8","0x959da8","0xc64a4a","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0xc64a4a","0xc64a4a"],
+    "code":["     apple=True","     orange=False","1.  right()","2.  If(apple or orange):","3.     print(\"fruit\")","4.  Else:","5.     print(\"flower\")"],
+    "text":["False","apple","True","","","flower","","fruit","orange","","0","1"], 
+    "textsize":[75,75,75,75,75,75,75,75,75,75,80,80], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":450,
+    "startY":190.5,
+    "order":[3,4,7],
+    "row":3,
+    "col":4,
+    "start":3,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 55,
+    "textStartY": 170,
+    "textGap": 100,
+    "textStartX": 1280,
+    "Hint" : "If either of the operand is true, then the output becomes True",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

@@ -1,0 +1,26 @@
+{
+    "blocks":["0xffa600","0xe5e5e5","0xe83878","0xe5e5e5","0xffa600","0xe83878","0xb6d82a","0xffa600","0xb6d82a","0xe83878","0xe5e5e5","0xffa600","0xb6d82a","0xffa600","0xe5e5e5","0xffa600","0xe5e5e5","0xe83878","0xe5e5e5","0xffa600"],
+    "code":["repeat (4) {","      up()","      down()","      if       {","            down()","            up()","      }","      left()","} "],
+    "startX":400,
+    "startY":200,
+    "order":[2,17,2,7,2,1,16,1,6,1,0,15,0,4,19,4,3],
+	"text":[], 
+	"textsize":[], 
+	"textcolor":[],
+    "row":5,
+    "col":4,
+    "start":2,
+    "scale":0.60,
+    "ballScale":0.60,
+    "fontSize": 50,
+    "textStartY": 200,
+    "textGap": 80,
+    "textStartX": 1380,
+    "color":["0xffa600"],
+    "ifcross":[true],
+    "ifBoxPos":[1520],
+    "Hint" : "",
+    "HintColor":"",
+    "BorderColor":""
+
+}

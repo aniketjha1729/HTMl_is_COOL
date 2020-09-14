@@ -1,0 +1,20 @@
+{
+    "blocks":["0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xe83878","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed"],
+    "code":["function  shake (){","      if        { ","             left()","     }","      right()","      left()","      right()","      if         {","             left()","      }","}","function  choreography (){","      shake()","      left()","      shake()","      right()","}","choreography()","choreography()","choreography()"],
+    "startX":400,
+    "startY":350,
+    "order":[8,9,8,9,8,7,6,7,6,7,8,9,8,9,8,7,6,7,6,7,8,9,8,9,8,7,6,7,6,7,8],
+    "row":5,
+    "col":3,
+    "start":8,
+    "scale":0.60,
+    "ballScale":0.60,
+    "fontSize": 35,
+    "textStartY":50,
+    "textGap": 51,
+    "textStartX": 1350,
+    "color":["0xe83878","0xf8d800"],
+    "ifcross":[false,false],
+    "ifBoxPos":[1455,1460]
+
+}

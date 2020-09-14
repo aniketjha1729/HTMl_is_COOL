@@ -1,0 +1,22 @@
+{
+    "blocks":["0x959da8","0xc64a4a","0xc64a4a","0x959da8","0xc64a4a","0x959da8","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0xc64a4a","0xc64a4a","0x959da8","0x959da8","0xc64a4a","0xc64a4a"],
+    "code":["     score=97","1.  up()","2.  right()","3.  If score>=90:","4.    print(\"First\")","5.  ElIf score>=60:","6.    print(\"Second\")","7.  ElIf score>=30:","8.    print(\"Third\")"],
+    "text":["","First\nSecond","Third","","1","","","Second","First\nThird","","First","97","","","Second\nThird","0"], 
+    "textsize":[60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":450,
+    "startY":175.5,
+    "order":[9,5,6,10],
+    "row":4,
+    "col":4,
+    "start":9,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 55,
+    "textStartY": 100,
+    "textGap": 85,
+    "textStartX": 1380,
+    "Hint" : "Once an elif statement is evaluated as true, no further elif statements are checked",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

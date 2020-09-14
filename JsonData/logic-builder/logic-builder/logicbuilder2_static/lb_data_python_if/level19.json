@@ -1,0 +1,22 @@
+{
+    "blocks":["0xff336b","0xec7063","0xff336b","0xec7063","0xff336b","0xec7063"],
+    "code":["for ( start i = 10 ; i > 0; decrease by 1 ) {","         print(i%6)","}"],
+    "text":["0","1","2","5","4","3"], 
+    "textsize":[60,60,60,60,60,60,60,60,60], 
+    "textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":350,
+    "order":[4,5,2,1,0,3,4,5,2,1],
+    "row":3,
+    "col":2,
+    "start":4,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 350,
+    "textGap": 90,
+    "textStartX": 1150,
+    "Hint" : "You will learn about if block in level 1",
+    "HintColor":"#ffffff",
+    "BorderColor":"0xFFFF00 "
+}

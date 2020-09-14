@@ -1,0 +1,22 @@
+{
+    "blocks":["0x28b28d","0x28b28d","0xabb3be","0xabb3be","0x28b28d","0x28b28d"],
+    "code":["right()","print(\"Hi\",end=' ')","print(\"Joe\",end='!')"],
+    "text":["Hi Joe","Hi joe!","","","HiJoe","Hi' 'Joe!"], 
+    "textsize":[65,65,65,65,65,65], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":270.5,
+    "order":[2,3,1],
+    "row":2,
+    "col":3,
+    "start":2,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "First print statement ends with space & second print statement ends with ! symbol",
+    "HintColor":"#be2b96",
+    "BorderColor":"0xFFFF00 "
+}

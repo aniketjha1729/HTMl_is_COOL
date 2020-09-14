@@ -1,0 +1,20 @@
+{
+    "blocks":["0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed"],
+    "code":["function  shake () {","       right()","       left()","       right()","       left()","}","function  dance () {","       shake()","       left()","}"," ","dance()","dance()","dance()"],
+    "startX":400,
+    "startY":350,
+    "order":[8,9,8,9,8,7,8,7,8,7,6,7,6,7,6,5],
+    "row":5,
+    "col":3,
+    "start":8,
+    "scale":0.70,
+    "ballScale":0.70,
+    "fontSize": 50,
+    "textStartY":100,
+    "textGap": 65,
+    "textStartX": 1450,
+    "color":["0xffa60"],
+    "ifcross":[true],
+    "ifBoxPos":[1630]
+
+}

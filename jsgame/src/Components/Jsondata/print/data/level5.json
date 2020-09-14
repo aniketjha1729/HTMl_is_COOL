@@ -1,0 +1,24 @@
+{
+    "blocks":["0xec7063","0xabb3be","0xec7063","0xabb3be","0xabb3be","0xec7063"],
+    "code":["right()","up()","print(\"45\")"],
+    "text":["45","","\"45\"","","","450"], 
+    "textsize":[65,65,65,55,65,65], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":350.5,
+    "order":[3,4,1,0],
+    "row":3,
+    "col":2,
+    "start":3,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "Printing a text value \"45\"",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}
+
+

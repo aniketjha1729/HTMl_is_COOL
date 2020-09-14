@@ -1,0 +1,22 @@
+{
+    "blocks":["0x7b7729","0x7b7729","0x7b7729","0x7b7729","0x7b7729","0x7b7729","0x959da8","0x959da8","0x7b7729","0x959da8","0x7b7729","0x959da8"],
+    "code":["     x=True","     y=True","     z=False","1.  right()","2.  If(x and y or z):","3.    print(1)","4.  Else:","5.    print(0)"],
+    "text":["True","0","-1","y","1","x","","","False","","1.0",""], 
+    "textsize":[75,80,80,80,80,90,75,75,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":450,
+    "startY":190.5,
+    "order":[6,7,4],
+    "row":3,
+    "col":4,
+    "start":6,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 55,
+    "textStartY": 150,
+    "textGap": 100,
+    "textStartX": 1280,
+    "Hint" : "The 'and' operator is evaluated first & then the 'or' operator",
+    "HintColor":"#632369",
+    "BorderColor":"0xFFFF00 "
+}

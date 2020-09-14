@@ -1,0 +1,22 @@
+{
+    "blocks":["0xec7063","0xec7063","0xec7063","0xec7063", "0xec7063", "0xec7063", "0xec7063","0xec7063"],
+    "code":["for ( start i = 0 ; i < 3 ; increase by 1 ) {","         ","         print(i)","         ","}"],
+    "text":["0","1","6","5","2","4"], 
+    "textsize":[60,60,60,60,60,60], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":516.5,
+    "order":[0,1,4],
+    "row":3,
+    "col":2,
+    "start":0,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "Select numbers that will be printed in print(i) statement. e.g for loop will print 1,2,3 . Select squares with number 1, 2 and 3",
+    "HintColor":"#222222",
+    "BorderColor":"0xFFFF00"
+}

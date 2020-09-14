@@ -1,0 +1,16 @@
+{
+    "blocks":["0x5499c7","0xec7063","0xec7063","0x5499c7","0xec7063","0xec7063","0xec7063","0x5499c7","0x5499c7","0x5499c7","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0x5499c7","0xec7063","0xec7063","0xec7063","0x5499c7","0x5499c7","0x5499c7"],
+    "code":["right()","down()","up()","left()","right()","up()","up()","right()"],
+    "startX":400,
+    "startY":350,
+    "order":[12,13,19,13,12,13,7,1,2],
+    "row":6,
+    "col":4,
+    "start":12,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 60,
+    "textStartY": 150,
+    "textGap": 90,
+    "textStartX": 1400
+}

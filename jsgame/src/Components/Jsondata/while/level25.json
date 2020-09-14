@@ -1,0 +1,25 @@
+{
+    "blocks":["0x7b7729","0x7b7729","0x959da8","0x7b7729","0x7b7729","0x959da8","0x7b7729","0x959da8","0x959da8"],
+    "code":["     p=1","1.  left()","2.  While(p<=10):","3.    If p==2:","4.      break","5.    print(p)","6.    p=p+1"],
+    "text":["2\n1","2","","-1","1\n2","","1","",""], 
+    "textsize":[75,75,75,75,75,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":290.5,
+    "order":[8,7,6],
+    "row":3,
+    "col":3,
+    "start":8,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 200,
+    "textGap": 96,
+    "textStartX": 1350,
+    "Hint" : "Break statement is used to terminate a running loop",
+    "HintColor":"#632369",
+    "BorderColor":"0xFFFF00 "
+}
+
+
+

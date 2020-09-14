@@ -1,0 +1,22 @@
+{
+    "blocks":["0xc64a4a","0xc64a4a","0x959da8","0xc64a4a","0x959da8","0xc64a4a","0x959da8","0x959da8","0xc64a4a","0xc64a4a","0xc64a4a","0x959da8"],
+    "code":["     x=5+True","1.  right()","2.  up()","3.  print(x > 5)"],
+    "text":["-1","False","","True","","0","","","-5","5","1",""], 
+    "textsize":[80,75,75,75,75,80,75,75,80,80,80,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":190.5,
+    "order":[6,7,4,3],
+    "row":3,
+    "col":4,
+    "start":6,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 300,
+    "textGap": 100,
+    "textStartX": 1400,
+    "Hint" : "If the left operand is greater than the right operand, then condition becomes true",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

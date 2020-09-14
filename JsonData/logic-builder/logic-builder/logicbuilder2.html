@@ -1,0 +1,87 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Logic Builder</title>
+	<script type="text/javascript" src="logicbuilder2_js/phaser.min.js"></script>
+	<script type="text/javascript" src="logicbuilder2_js/phaser-input.min.js"></script>
+	<script type="text/javascript" src="logicbuilder2_js/phaser-kinetic-scrolling-plugin.js"></script>
+	<script src="logicbuilder2_js/boot.js"></script>
+	<script src="logicbuilder2_js/chars.js"></script>
+	<script src="logicbuilder2_static/lb_data_python_if/preload.js?v=2"></script>
+	<script src="logicbuilder2_js/menu.js"></script>
+	<script src="logicbuilder2_js/thegame.js"></script>
+	<script src="logicbuilder2_js/creditsText.js"></script>
+	<script src="logicbuilder2_js/infotext.js"></script>
+	<script src="logicbuilder2_js/credit.js"></script>
+	<script src="logicbuilder2_js/info.js"></script>
+	<script src="logicbuilder2_static/lb_data_python_if/level.js?val=2"></script>
+	<script src="logicbuilder2_js/chars.js"></script>
+	<script src="logicbuilder2_js/utils.js"></script>
+	<script src="logicbuilder2_js/gameManager.js?val=14"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+
+<!-- <script src="cordova.js"></script> -->
+
+
+	<style type="text/css">
+	body {
+		cursor: url(logicbuilder2_images/my-cursor.png), auto;
+		}
+
+		@font-face {
+            font-family: 'Geometric415bt';
+            src: url('fonts/SQR721C.eot');
+            src: local('☺'), url('logicbuilder2_fonts/SQR721C.woff') format('woff'), url('logicbuilder2_fonts/SQR721C.ttf') format('truetype'), url('logicbuilder2_fonts/SQR721C.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+    }
+ html{ height: 100%; } body { margin: 0; background: #57c7c8; } h1{ margin:0px; color: white; text-align: center; padding-top:
+70%; } .warning { background-color: #57c7c8; z-index: 11; position: relative; height: 100%; display:none; }
+
+    </style>
+</head>
+<body>
+	<div id = "warning" class="warning"><h1>Please play the game in Landscape Mode</h1></div>
+
+<script type="text/javascript">
+	var curSelection = 4;
+    var gameWidth = 1920;
+    var gameHeight = 1080;
+    var windowlocation = "../all_courses";
+
+
+
+(function() {
+
+
+    /*  var windowRatio = window.innerWidth / window.innerHeight;
+			     if(windowRatio < width / height){
+			          var height = width / windowRatio;
+			     }		
+		 */
+    //var game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, "game");
+    var game = new Phaser.Game(gameWidth, gameHeight, Phaser.CANVAS, "game");
+    game.currentLevel = 1;
+    game.score = 0;
+    game.life = 5;
+    game.state.add("Boot", boot);
+    game.state.add("Preload", preload);
+    game.state.add("Menu", menu);
+    game.state.add("TheGame", thegame);
+	game.state.add("Level", level);
+	game.state.add("Info", info);
+	game.state.add("Credit", credit);
+	game.state.start("Boot");
+
+})();
+</script>
+
+</body>
+</html>

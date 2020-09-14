@@ -1,0 +1,22 @@
+{
+    "blocks":["0x8843bb","0x8843bb","0x8843bb","0x8843bb","0x8843bb","0x8843bb","0x8843bb","0x8843bb","0x8843bb"],
+    "code":["for ( start i = 12 ; i >=7 0; decrease by 1 ) {","         print(i)","}"],
+    "text":["5","12","13","10","11","6","9","8","7"], 
+    "textsize":[60,60,60,60,60,60,60,60,60], 
+    "textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":350,
+    "order":[1,4,3,6,7,8],
+    "row":3,
+    "col":3,
+    "start":1,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 350,
+    "textGap": 90,
+    "textStartX": 1150,
+    "Hint" : "",
+    "HintColor":"#ffffff",
+    "BorderColor":"0xFFFF00 "
+}

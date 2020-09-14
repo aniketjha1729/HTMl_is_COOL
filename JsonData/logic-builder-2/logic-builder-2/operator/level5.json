@@ -1,0 +1,24 @@
+{
+    "blocks":["0x0a908b","0x0a908b","0x959da8","0x0a908b","0x959da8","0x0a908b"],
+    "code":["up()","x=-2","y=-5","print(x*y)"],
+    "text":["10","-7","","-10","","-3"], 
+    "textsize":[75,78,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":550,
+    "startY":300.5,
+    "order":[4,2,0],
+    "row":2,
+    "col":3,
+    "start":4,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 320,
+    "textGap": 100,
+    "textStartX": 1300,
+    "Hint" : "In multiplication, when both the numbers are -ve then the o/p will be +ve",
+    "HintColor":"#8d1023",
+    "BorderColor":"0xFFFF00 "
+}
+
+

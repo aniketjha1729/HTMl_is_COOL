@@ -1,0 +1,22 @@
+{
+    "blocks":["0x0a908b","0x959da8","0x0a908b","0x0a908b","0x959da8","0x0a908b"],
+    "code":["down()","p=3","q=3","print(p*q)"],
+    "text":["6","","p*q","9","","3*3"], 
+    "textsize":[80,70,75,80,70,70], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":400.5,
+    "order":[1,4,3],
+    "row":3,
+    "col":2,
+    "start":1,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "‘*’ operator is used to multiply two numbers",
+    "HintColor":"#8d1023",
+    "BorderColor":"0xFFFF00 "
+}

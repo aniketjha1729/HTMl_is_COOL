@@ -1,0 +1,26 @@
+{
+    "blocks":["0xec7063","0xec7063","0xec7063","0xec7063","0x959da8","0xec7063","0xec7063","0x959da8","0x959da8"],
+    "code":["     y=1","1.  left()","2.  up()","3.  While y<3:","4.    print(\"GoodMorning\")","5.    y+=1"],
+    "text":["Good Morning","Goodmorning\nGoodmorning","goodmorning","GoodMorning\nGoodMorning","","GoodMorning","Good Morning\nGoog Morning","",""], 
+    "textsize":[40,40,40,40,40,40,40,40,40], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":230.5,
+    "order":[8,7,4,3],
+    "row":3,
+    "col":3,
+    "start":8,
+    "scale":1.00,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY": 230,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "A while loop repeatedly executes a set of statements as long as a condition is true",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}
+
+
+
+

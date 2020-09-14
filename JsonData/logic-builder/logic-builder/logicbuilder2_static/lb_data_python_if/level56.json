@@ -1,0 +1,20 @@
+{
+    "blocks":["0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xe5e5e5","0xe5e5e5","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xe5e5e5","0xe5e5e5","0xb782ed","0xf8d800","0xb782ed","0xf8d800","0xb782ed","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5"],
+    "code":["function  shake () {","      right()","      left()","      right()","      left()","}","function  dance () { ","      shake()","      left()","}","function  choreography () {","       if         {","               left()","               dance()","       } else { ","            right()","       } ","       right()","       right()","}","repeat (3) {","      choreography()","}"],
+    "startX":300,
+    "startY":250,
+    "order":[18,17,18,17,18,17,16,17,18,17,18,17,18,17,16,17,18,17,18,17,18,17,16,17,18],
+    "row":7,
+    "col":5,
+    "start":18,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 33,
+    "textStartY":65,
+    "textGap": 44,
+    "textStartX": 1400,
+    "color":["0xb782ed"],
+    "ifcross":[false],
+    "ifBoxPos":[1510]
+
+}

@@ -1,0 +1,19 @@
+{
+    "blocks":["0xe5e5e5","0xe5e5e5","0xff0068","0xe5e5e5","0xe5e5e5","0xff0068 ","0xe5e5e5","0xe5e5e5","0xf4d03f","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xff0068","0x5d6d7e ","0xe5e5e5","0xe5e5e5","0xff0068","0x5d6d7e ","0xe5e5e5","0xe5e5e5","0xe5e5e5"],
+    "code":["left()","repeat  (6)  {","       if       {","             left()","       }  else  {","              down()","        } ","} "],
+    "startX":550,
+    "startY":300,
+    "order":[3,2,1,5,4,8,12,15],
+    "row":4,
+    "col":5,
+    "start":3,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 50,
+    "textStartY": 250,
+    "textGap": 100,
+    "textStartX": 1300,
+    "color":["0xff0068"],
+    "ifcross":[false],
+    "ifBoxPos":[1455]
+}

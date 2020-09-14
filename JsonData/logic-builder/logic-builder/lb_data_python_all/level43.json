@@ -1,0 +1,20 @@
+{
+    "blocks":["0xec7063","0xec7063","0x5dade2 ","0xec7063","0xec7063","0xec7063","0x5dade2 ","0xec7063","0x5dade2 ","0xec7063","0xec7063","0xec7063","0xec7063","0xec7063","0xf4d03f "],
+    "code":["while      {","      up()","      if       { ","           down()","           left()","      }","} "],
+    "startX":600, 
+    "startY":280,
+    "order":[0,12,8,12,15],
+    "row":4,
+    "col":4,
+    "start":0,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 50,
+    "textStartY": 280,
+    "textGap": 100,
+    "textStartX": 1300,
+    "color":["0xec7063","0x5dade2 "],
+    "ifcross":[false],
+    "ifBoxPos":[1430,1440]
+
+}

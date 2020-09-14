@@ -1,0 +1,21 @@
+{
+    "blocks":["0xe5e5e5","0xe5e5e5","0xe5e5e5","0xff0068","0xff0068","0xff0068","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xff0068","0xff0068","0xff0068"],
+    "code":["while      {","      left()","}","right()"],
+    "startX":350,
+    "startY":450,
+    "order":[2,1,0,4,0],
+    "row":5,
+    "col":3,
+    "start":2,
+    "scale":0.60,
+    "ballScale":0.60,
+    "fontSize": 50,
+    "textStartY": 400,
+    "textGap": 80,
+    "textStartX": 1400,
+    "color":["0xff0068"],
+    "ifcross":[true],
+    "ifBoxPos":[1530]
+
+
+}

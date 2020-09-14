@@ -1,0 +1,22 @@
+{
+    "blocks":["0x959da8","0x387e93","0x387e93","0x959da8","0x959da8","0x387e93"],
+    "code":["     marks=90","1.  down()","2.  right()","3.  print(not marks)"],
+    "text":["","False","90","","","True"], 
+    "textsize":[85,85,85,85,85,85], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":380.5,
+    "order":[0,3,4,1],
+    "row":3,
+    "col":2,
+    "start":0,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 330,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "The 'not' operator complements the operand",
+    "HintColor":"#934D38",
+    "BorderColor":"0xFFFF00 "
+}

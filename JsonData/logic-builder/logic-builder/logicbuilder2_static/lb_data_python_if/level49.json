@@ -1,0 +1,20 @@
+{
+    "blocks":["0x29cbd3","0x29cbd3","0x29cbd3","0xe5e5e5","0x29cbd3","0xb782ed","0xb782ed","0xe83878","0x29cbd3","0xb782ed","0xb782ed","0xe83878","0xe5e5e5","0xe83878","0xe83878","0xe83878"],
+    "code":["right()","square() ","left()","square()","","function square () {","       up()","       right()","       down()","       left()","}"],
+    "startX":500,
+    "startY":250,
+    "order":[9,10,6,7,11,10,9,5,6,10,9],
+    "row":4,
+    "col":4,
+    "start":9,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 55,
+    "textStartY":130,
+    "textGap": 80,
+    "textStartX": 1400,
+    "color":["0xffa60"],
+    "ifcross":[true],
+    "ifBoxPos":[1630]
+
+}

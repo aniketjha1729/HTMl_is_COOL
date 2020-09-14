@@ -1,0 +1,27 @@
+{
+    "blocks":["0xe83878","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe5e5e5","0xe83878"],
+    "code":["right()","if      { ","      down()","}","right()"],
+    "startX":500,
+    "startY":400,
+    "order":[3,4,1,2,0,1],
+	"text":[], 
+	"textsize":[], 
+	"textcolor":[],
+    "row":3,
+    "col":2,
+    "start":3,
+    "scale":1,
+    "ballScale":1,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 95,
+    "textStartX": 1200,
+    "color":["0xe83878"],
+    "ifcross":[true],
+    "ifBoxPos":[1270],
+    "Hint" : "",
+    "HintColor":"",
+    "BorderColor":""
+
+
+}

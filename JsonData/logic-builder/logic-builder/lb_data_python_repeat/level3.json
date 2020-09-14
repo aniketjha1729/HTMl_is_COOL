@@ -1,0 +1,22 @@
+{
+    "blocks":["0xb6d82a","0xe83878","0xe83878","0xb6d82a","0xb6d82a","0xe83878","0xb6d82a","0xb6d82a","0xb6d82a","0xe83878","0xe83878","0xb6d82a","0xb6d82a","0xb6d82a","0xe83878"],
+    "code":["repeat  (4)  {","       down()","       right()","}","up()"],
+    "startX":500,
+    "startY":400,
+    "order":[2,7,8,13,14,4,0,5,6,1],
+	"text":[], 
+	"textsize":[], 
+	"textcolor":[],
+    "row":5,
+    "col":3,
+    "start":2,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 60,
+    "textStartY": 300,
+    "textGap": 100,
+    "textStartX": 1300,
+    "Hint" : "",
+    "HintColor":"",
+    "BorderColor":""
+}

@@ -1,0 +1,22 @@
+{
+    "blocks":["0xc64a4a","0xc64a4a","0xc64a4a","0xc64a4a","0x959da8","0x959da8","0x959da8","0xc64a4a","0x959da8"],
+    "code":["1.  up()","2.  left()","3.  print(False+False)"],
+    "text":["1","0","True","False","","","","2",""], 
+    "textsize":[90,90,85,85,85,85,85,90,85], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":310.5,
+    "order":[8,5,4,1],
+    "row":3,
+    "col":3,
+    "start":8,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "Computer equates the value of False to 0",
+    "HintColor":"#328031",
+    "BorderColor":"0xFFFF00 "
+}

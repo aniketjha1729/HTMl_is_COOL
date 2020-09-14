@@ -1,0 +1,22 @@
+{
+    "blocks":["0x7b7729","0x7b7729","0x7b7729","0x959da8","0x959da8","0x7b7729","0x959da8","0x7b7729","0x7b7729"],
+    "code":["     a=50","1.  right()","2.  If(a>30):","3.    print(a)","4.  print(\"a>30\")"],
+    "text":["50>30","a>30","50","","","50\na>30","","50","a"], 
+    "textsize":[65,75,75,75,75,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":310.5,
+    "order":[3,4,5],
+    "row":3,
+    "col":3,
+    "start":3,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 300,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "If the boolean expression evaluates to TRUE, then the block of statements inside the if statement is executed",
+    "HintColor":"#632369",
+    "BorderColor":"0xFFFF00 "
+}

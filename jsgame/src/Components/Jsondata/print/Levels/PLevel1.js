@@ -1,0 +1,203 @@
+/* eslint-disable */
+import React, { useState } from 'react'
+import KeyboardEventHandler from 'react-keyboard-event-handler';
+import "../css/Level.css"
+import useSound from "use-sound"
+import step from '../../../audio/step.mp3'
+import right from '../../../audio/right1.mp3'
+import wrong from '../../../audio/wrong1.mp3'
+import swal from "sweetalert"
+
+
+export default function CLevel1() {
+    const [myfiles, setMyfiles] = useState(`level1.json`)
+    const [currentscore, setCurrentscore] = useState(0)
+
+    const [keyCurrentStep, setKeyCurrentStep] = useState(1)
+    localStorage.setItem("finalScore", currentscore)
+    const [level, setLevel] = useState(2)
+
+    const changelevel = () => {
+        setKeyCurrentStep(1)
+        setKeyCurrentStage(start)
+        setLevel(level + 1);
+        var templevel = level.toString();
+        setMyfiles(`level${templevel}.json`)
+        setMove(0)
+        setCurrentstep(1)
+    }
+
+    const PostData = require(`../data/${myfiles}`)
+    const { blocks, code, text, order, row, col, start, Hint } = PostData;
+
+    const [startIndex, setstartIndex] = useState(start)
+    const [keyCurrentStage, setKeyCurrentStage] = useState(start)
+    const [move, setMove] = useState(0)
+    const [currentstep, setCurrentstep] = useState(1)
+    const [stepActive] = useSound(step)
+    const [rightActive] = useSound(right)
+    const [wrongActive] = useSound(wrong)
+
+
+    var textdata = 0;
+    const myf1 = () => {
+        textdata++;
+    }
+
+    const blockColor = []
+    blocks.map((blocks, index) => {
+        blockColor.push(blocks.replace(/0x/, "#"))
+    })
+
+    var rows = [];
+    for (var i = 0; i < row; i++) {
+        rows.push(i);
+    }
+    var columns = [];
+    for (var i = 0; i < col; i++) {
+        columns.push(i)
+    }
+
+    var score = [];
+    for (var i = 0; i < order.length - 1; i++) {
+        score.push(i + 1)
+    }
+    const firststep = (e) => {
+        if ((e.target.id === order[currentstep].toString() && move === 0)) {
+            setCurrentstep(currentstep + 1)
+            setMove(move + 1)
+            stepActive();
+        }
+    }
+
+    const nextstep = (e) => {
+        if ((e.target.id === order[currentstep].toString())) {
+            setCurrentstep(currentstep + 1)
+            setMove(move + 1)
+            if ((move) === score[(score.length) - 2]) {
+                rightActive();
+                swal("Good job!", " ", "success")
+                setCurrentscore(currentscore + 1)
+                localStorage.setItem("finalScore", currentscore)
+            } else {
+                stepActive();
+            }
+        } else {
+            wrongActive();
+            setstartIndex(start);
+            setMove(0);
+            setCurrentstep(1);
+            swal("Wrong Path!", "Start Again!", "warning");
+        }
+    }
+
+    var keynum = 0
+    const keyfunction = (key, e) => {
+        if (key === "right") {
+            var keynum = keyCurrentStage + 1
+        } else if (key === "left") {
+            var keynum = keyCurrentStage - 1
+        } else if (key === "up") {
+            var keynum = keyCurrentStage - rows.length;
+        } else if (key === "down") {
+            var keynum = keyCurrentStage + rows.length;
+        }
+
+        if (keynum === order[keyCurrentStep]) {
+            setKeyCurrentStep(keyCurrentStep + 1)
+            setKeyCurrentStage(keynum)
+            setMove(move + 1)
+            if ((move) === score[(score.length) - 2]) {
+                rightActive();
+                swal("Good job!", " ", "success")
+                setCurrentscore(currentscore + 1)
+                localStorage.setItem("finalScore", currentscore)
+            } else {
+                stepActive();
+            }
+        } else {
+            wrongActive();
+            setKeyCurrentStage(start)
+            setMove(0);
+            setKeyCurrentStep(1);
+            swal("Wrong Path!", "Start Again!", "warning");
+        }
+    }
+
+    const ComponentA = () => (<div>
+        <KeyboardEventHandler handleKeys={['all']} onKeyEvent={keyfunction} />
+    </div>)
+
+
+    return (
+        <div>
+            <ComponentA />
+            <div id="myid" className="container">
+                <br /><br />
+                {move === score[(score.length) - 1] ?
+                    <div className="row ">
+                        <div className="col">
+                            <div className="nextGame">
+                                <button type="button" className="btn btn-success btn-lg btn3d" onClick={changelevel}>Next</button>
+                            </div>
+                        </div>
+                    </div> :
+                    <div className="row ">
+                        <div className="col">
+                            <div className="nextGame">
+                                <button type="button" className="btn btn-danger btn-lg btn3d">Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+                <div className="row">
+                    <div className="col-6">
+                        <div className="blockgame">
+                            <div className="container">
+                                <table className="blocks">
+                                    <tbody>
+                                        {columns.map((tablerow, tablerowindex) => {
+                                            return <tr key={tablerowindex}>{rows.map((tablecolumn, tablecolumnindex) => {
+                                                return <td id={textdata} onClick={textdata === order[1] ? firststep : nextstep} key={tablecolumnindex} className="btn3d" style={{ backgroundColor: blockColor[textdata], width: '100px', height: "100px", borderRadius: "10px", position: "relative", textAlign: "center" }}>
+                                                    {((textdata === order[move]) && textdata != order[order.length - 1]) ? <div className="blink" id="blink"></div> : ''}
+                                                    {(move === order.length - 1) && (textdata === order[order.length - 1]) ? <div className="correctans"><b>&#10003;</b></div> : ''}
+                                                    {text[textdata]}
+                                                    {myf1()}
+                                                </td>
+                                            })}</tr>
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <div>
+                            <div className="container" style={{ whiteSpace: "pre-wrap" }}>
+                                <table className="codes">
+                                    <tbody>
+                                        {code.map((sctdata, codedataindex) => {
+                                            return <tr key={codedataindex}>
+                                                <td className="code">{sctdata}</td>
+                                            </tr>
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col mysocre">
+                        <button type="button" className="btn btn-primary btn-lg btn3d score">Score:{localStorage.getItem("finalScore")}</button>
+                    </div>
+                </div>
+                <div className="footer">
+                    {Hint}
+                </div>
+            </div>
+        </div>
+    )
+}

@@ -1,0 +1,19 @@
+{
+    "blocks":["0xe83878","0xe83878","0xe83878","0xe83878"],
+    "code":["left()","toTheRight ()","  ","function  toTheRight () {","       right()","       right()","       right()","} "],
+    "startX":450,
+    "startY":500,
+    "order":[1,0,1,2,3],
+    "row":4,
+    "col":1,
+    "start":1,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 50,
+    "textStartY":300,
+    "textGap": 70,
+    "textStartX": 1300,
+    "color":["0xffa60"],
+    "ifcross":[true],
+    "ifBoxPos":[1630]
+}

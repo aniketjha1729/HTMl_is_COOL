@@ -1,0 +1,22 @@
+{
+    "blocks":["0xec7063","0xec7063","0xabb3be","0xabb3be","0xec7063","0xec7063"],
+    "code":["right()","print(\"Hello World\")"],
+    "text":["hello world","Hello World","","","HelloWorld","Hello world"], 
+    "textsize":[50,50,50,50,50,50], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":500,
+    "startY":300.5,
+    "order":[2,3,1],
+    "row":2,
+    "col":3,
+    "start":2,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 350,
+    "textGap": 100,
+    "textStartX": 1350,
+    "Hint" : "Printing a simple String",
+    "HintColor":"#148493",
+    "BorderColor":"0xFFFF00 "
+}

@@ -1,0 +1,22 @@
+{
+    "blocks":["0xb6d82a","0xb6d82a","0xb6d82a","0xb6d82a","0xb6d82a","0xe83878","0xb6d82a","0xb6d82a","0xe83878","0xe83878","0xe83878","0xe83878","0xe83878","0xb6d82a","0xb6d82a","0xb6d82a","0xb6d82a","0xb6d82a"],
+    "code":["left()","repeat  (4)  { ","       right()","}","down()"],
+    "startX":400,
+    "startY":450,
+    "order":[7,6,7,8,9,10,16],
+	"text":[], 
+	"textsize":[], 
+	"textcolor":[],
+    "row":6,
+    "col":3,
+    "start":7,
+    "scale":0.50,
+    "ballScale":0.50,
+    "fontSize": 70,
+    "textStartY": 250,
+    "textGap": 120,
+    "textStartX": 1400,
+    "Hint" : "repeat(4) means you have to repeat sequence of code inside repeat code block 4 times",
+    "HintColor":"",
+    "BorderColor":""
+}

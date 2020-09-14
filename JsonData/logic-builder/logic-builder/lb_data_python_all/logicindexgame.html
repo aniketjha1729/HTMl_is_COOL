@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
+
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Logic Builder</title>
+	<script type="text/javascript">
+		var todaysdate = new Date();
+		var randomnumber = 14;//todaysdate.getTime();
+	</script>  
+    <script type="text/javascript" src="/static/js/phaser.js"></script>
+    <script type="text/javascript" src="/static/js/phaser-kinetic-scrolling-plugin.js"></script>
+    <script src="/static/js/boot.js?v=1"></script>
+    <script src="/static/js/chars.js"></script>
+    <script src="/static/lb_data_python_all/preload_lb_data_python_all.js?v=14"></script>
+    <script src="/static/js/menu.js?v=1"></script>
+    <script src="/static/js/thegame.js?v=1"></script>
+	<script src="/static/js/creditsText.js"></script>
+	<script src="/static/js/infotext.js"></script>
+	<script src="/static/js/credit.js"></script>
+	<script src="/static/js/info.js"></script>
+    <script src="/static/lb_data_python_all/level_lb_data_python_all.js?v=21"></script>
+	<script src="/static/js/chars.js"></script>
+	<script src="/static/js/utils.js?v=1"></script>
+	<script src="/static/js/gameManager.js?v=9"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/custome.css" >
+    <link rel="stylesheet" href="/static/css/responsive.css">
+   <script src="/static/js/jquery-1.11.1.js"></script>
+     <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/microsite.js?v=18"></script>
+        <script>
+          loadCustomizations('');
+        </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+
+<!-- <script src="cordova.js"></script> -->
+
+
+	<style type="text/css">
+		@font-face {
+            font-family: 'Geometric415bt';
+            src: url('/static/fonts/SQR721C.eot');
+            src: local('☺'), url('/static/fonts/SQR721C.woff') format('woff'), url('/static/fonts/SQR721C.ttf') format('truetype'), url('/static/fonts/SQR721C.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+    }
+ html{ height: 100%; } body { margin: 0; background: #f1f1f1; } h1{ margin:0px; color: white; text-align: center; padding-top:
+70%; } .warning { background-color: #f1f1f1; z-index: 11; position: relative; height: 100%; display:none; }
+
+    </style>
+</head>
+<body>
+	<div id = "warning" class="warning"><h1>Please play the game in Landscape Mode</h1></div>
+
+<script type="text/javascript">
+	var curSelection = 4;
+    var gameWidth = 1920;
+    var gameHeight = 1080;
+    var windowlocation = "/all_courses/";
+
+
+
+(function() {
+
+
+    /*  var windowRatio = window.innerWidth / window.innerHeight;
+			     if(windowRatio < width / height){
+			          var height = width / windowRatio;
+			     }		
+		 */
+    //var game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, "game");
+    var game = new Phaser.Game(gameWidth, gameHeight, Phaser.CANVAS, "game");
+    game.currentLevel = 1;
+    game.score = 0;
+    game.life = 5;
+    game.state.add("Boot", boot);
+    game.state.add("Preload", preload);
+    game.state.add("Menu", menu);
+    game.state.add("TheGame", thegame);
+	game.state.add("Level", level);
+	game.state.add("Info", info);
+	game.state.add("Credit", credit);
+	game.state.start("Boot");
+
+})();
+</script>
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://givemefive.in">
+        <img src="/media/logo.png" class="img img-responsive">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-centre">
+             <h2>Learn Logic through Games ! </h2>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<a class="main-btn pull-right" href="/all_courses/">Jump to course</a>
+</body>
+</html>

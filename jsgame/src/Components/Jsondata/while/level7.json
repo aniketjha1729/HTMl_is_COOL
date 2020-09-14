@@ -1,0 +1,25 @@
+{
+    "blocks":["0x0a908b","0x959da8","0x0a908b","0x0a908b","0x959da8","0x959da8","0x0a908b","0x0a908b","0x959da8","0x959da8","0x0a908b","0x0a908b"],
+    "code":["     m=1","1.  up()","2.  right()","3.  up()","4.  While(m<=3):","5.    print(m)","6.    m+=1"],
+    "text":["1\n2","","1\n2\n3","3\n2","","","1\n3","1","","","2\n3","3\n2\n1"], 
+    "textsize":[57,57,57,57,57,57,57,57,57,57,57,57], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":370,
+    "startY":280.5,
+    "order":[8,4,5,1,2],
+    "row":4,
+    "col":3,
+    "start":8,
+    "scale":0.90,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 220,
+    "textGap": 100,
+    "textStartX": 1380,
+    "Hint" : "The while loop must have an increment or decrement operation",
+    "HintColor":"#8d1023",
+    "BorderColor":"0xFFFF00 "
+}
+
+
+

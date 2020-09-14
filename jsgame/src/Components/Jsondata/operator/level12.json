@@ -1,0 +1,22 @@
+{
+    "blocks":["0x959da8","0x0a908b","0x959da8","0x0a908b","0x0a908b","0x959da8","0x959da8","0x0a908b","0x0a908b","0x959da8","0x0a908b","0x0a908b","0x959da8","0x0a908b","0x0a908b","0x0a908b"],
+    "code":["down()","left()","down()","p=10","q=5","r=3","print(p/q*r)"],
+    "text":["","0.666","","6.01","15","","","6","0.66","","6.0","6.06","","2","0.6","6.1"], 
+    "textsize":[75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":400,
+    "startY":190.5,
+    "order":[2,6,5,9,10],
+    "row":4,
+    "col":4,
+    "start":2,
+    "scale":0.70,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 180,
+    "textGap": 100,
+    "textStartX": 1400,
+    "Hint" : "First ‘/’ operator divides the operand ‘p’ by ‘q’ & then the result is multiplied with ‘r’",
+    "HintColor":"#8d1023",
+    "BorderColor":"0xFFFF00 "
+}

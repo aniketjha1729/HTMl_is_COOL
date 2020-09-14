@@ -1,0 +1,41 @@
+{
+    "blocks":["0x3d8aa7","0x3d8aa7","0x959da8","0x3d8aa7","0x959da8","0x3d8aa7"],
+    "code":["up()","q=25","q/=5","print(q)"],
+    "text":["5","25","","5.0","","125"], 
+    "textsize":[85,79,75,75,75,75], 
+	"textcolor":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"], 
+    "startX":550,
+    "startY":300.5,
+    "order":[4,2,3],
+    "row":2,
+    "col":3,
+    "start":4,
+    "scale":0.75,
+    "ballScale":0.75,
+    "fontSize": 60,
+    "textStartY": 320,
+    "textGap": 100,
+    "textStartX": 1300,
+    "Hint" : "Incrementing using division",
+    "HintColor":"#8e2877",
+    "BorderColor":"0xFFFF00 "
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
