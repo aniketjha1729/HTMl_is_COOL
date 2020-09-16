@@ -9,13 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 40px;
+            margin: 10px;
         }
+        
         .box{
             display: flex;
         }
         img{
-            width: 218px !important;
+            width: 228px !important;
             height: 200px;
         }
 
@@ -23,13 +24,13 @@
             background-color: pink;
             color: black;
             /* padding: 5px; */
-            border: 1px solid black;
+            border: 1px solid rgb(211, 9, 9);
             /* margin:4px ; */
             width: 100%;
         }
 
         .row {
-            background-color: #444;
+            
             color: #fff;
             /* border: 1px solid red; */
             font-size: 150%;
@@ -41,70 +42,53 @@
 
         }
 
-        .col-2 {
+        .col-4 {
             border: 1px solid rebeccapurple;
-            height: 204px;
+            height: 200px;
             padding-left: 0;
             padding-right: 0;
             padding-bottom: 0;
+            
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="box">
-            
-                <img src="row-2-col-3.jpg" alt="" srcset="" id="task6" class="task" draggable="true">
-                   
-                <img src="row-2-col-1.jpg" alt="" srcset="" id="task4" class="task" draggable="true">
-            
-            
-                <img src="row-1-col-3.jpg" alt="" srcset="" id="task3" class="task" draggable="true">
-            
-            
+    <div class="row">
+        <div class="col-6">
+            <div class="box">
+                <img src="row-2-col-1(1).jpg" alt="" srcset="" id="task1" class="task" draggable="true">
+                <img src="row-2-col-1(2).jpg" alt="" srcset="" id="task2" class="task" draggable="true">
+            </div>
+            <div class="box">
+                <img src="row-2-col-1.jpg" alt="" srcset="" id="task3" class="task" draggable="true">
+                <img src="row-2-col-1(5).jpg" alt="" srcset="" id="task4" class="task" draggable="true">
+            </div>
         </div>
-        <div class="box">
-            <img src="row-1-col-2.jpg" alt="" srcset="" id="task2" class="task" draggable="true">
-        
-        
-            <img src="row-2-col-2.jpg" alt="" srcset="" id="task5" class="task" draggable="true">
-        
-        
-             <img src="row-1-col-1.jpg" alt="" srcset="" id="task1" class="task" draggable="true"></div>
-         </div>
-         <br>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4" id="box1">
+                    <img src="row-1-col-1.jpg" alt="" srcset="" id="task1" class="task" draggable="true">
+                </div>
+                <div class="col-4" id="box2">
+                    <img src="row-1-col-2.jpg" alt="" srcset="" id="task2" class="task" draggable="true">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4" id="box3"></div>
+                <div class="col-4" id="box4">
+                    <img src="row-2-col-2.jpg" alt="" srcset="" id="task4" class="task" draggable="true">
+                </div>
+            </div>
+        </div>
     <div>
-        <div class="row">
-            <div class="col-2" id="box1">
-
-            </div>
-            <div class="col-2" id="box2">
-
-            </div>
-            <div class="col-2" id="box3">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2" id="box4">
-
-            </div>
-            <div class="col-2" id="box5">
-
-            </div>
-            <div class="col-2" id="box6">
-
-            </div>
-        </div>
+        
     </div>
     <script>
         var droptarget = document.querySelector("#box1");
         var droptarget1 = document.querySelector("#box2");
         var droptarget2 = document.querySelector("#box3");
         var droptarget3 = document.querySelector("#box4");
-        var droptarget4 = document.querySelector("#box5");
-        var droptarget5 = document.querySelector("#box6");
         var draggabel = document.querySelectorAll(".task");
         // console.log(draggabel);
         for (let i = 0; i < draggabel.length; i++) {
@@ -127,13 +111,7 @@
         droptarget3.addEventListener("dragover", function (ev) {
             ev.preventDefault();
         });
-        droptarget4.addEventListener("dragover", function (ev) {
-            ev.preventDefault();
-        });
-        droptarget5.addEventListener("dragover", function (ev) {
-            ev.preventDefault();
-        });
-
+        
 
         droptarget.addEventListener("drop", function (ev) {
             ev.preventDefault();
@@ -141,6 +119,8 @@
             let srcId = ev.dataTransfer.getData("srcId");
             if (srcId == 'task1') {
                 target.appendChild(document.getElementById(srcId));
+            }else{
+                alert("Wrong Move")
             }
         });
 
@@ -150,6 +130,8 @@
             let srcId = ev.dataTransfer.getData("srcId");
             if (srcId == "task2") {
                 target.appendChild(document.getElementById(srcId));
+            } else {
+                alert("Wrong Move")
             }
         });
         droptarget2.addEventListener("drop", function (ev) {
@@ -158,6 +140,8 @@
             let srcId = ev.dataTransfer.getData("srcId");
             if (srcId == "task3") {
                 target.appendChild(document.getElementById(srcId));
+            } else {
+                alert("Wrong Move")
             }
         });
         droptarget3.addEventListener("drop", function (ev) {
@@ -166,23 +150,8 @@
             let srcId = ev.dataTransfer.getData("srcId");
             if (srcId == 'task4') {
                 target.appendChild(document.getElementById(srcId));
-            }
-        });
-
-        droptarget4.addEventListener("drop", function (ev) {
-            ev.preventDefault();
-            let target = ev.target;
-            let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == "task5") {
-                target.appendChild(document.getElementById(srcId));
-            }
-        });
-        droptarget5.addEventListener("drop", function (ev) {
-            ev.preventDefault();
-            let target = ev.target;
-            let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == "task6") {
-                target.appendChild(document.getElementById(srcId));
+            } else {
+                alert("Wrong Move")
             }
         });
     </script>
