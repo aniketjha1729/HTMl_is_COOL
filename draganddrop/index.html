@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <style>
         body {
             margin: 10px;
@@ -50,6 +52,7 @@
             padding-bottom: 0;
             
         }
+        
     </style>
 </head>
 
@@ -68,92 +71,70 @@
         <div class="col-6">
             <div class="row">
                 <div class="col-4" id="box1">
-                    <img src="row-1-col-1.jpg" alt="" srcset="" id="task1" class="task" draggable="true">
+                    <input type="file" accept="image/*" name="image" id="file1" onchange="loadFile1(event)">
+                    <img alt="" srcset="" id="task5" class="task" draggable="true">
                 </div>
                 <div class="col-4" id="box2">
-                    <img src="row-1-col-2.jpg" alt="" srcset="" id="task2" class="task" draggable="true">
+                    <input type="file" accept="image/*" name="image" id="file2" onchange="loadFile2(event)">
+                    <img  alt="" srcset="" id="task6" class="task" draggable="true">
                 </div>
             </div>
             <div class="row">
                 <div class="col-4" id="box3"></div>
                 <div class="col-4" id="box4">
-                    <img src="row-2-col-2.jpg" alt="" srcset="" id="task4" class="task" draggable="true">
+                    <input type="file" accept="image/*" name="image" id="file3" onchange="loadFile3(event)">
+                    <img  alt="" srcset="" id="task7" class="task" draggable="true">
                 </div>
             </div>
         </div>
     <div>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
         
     </div>
     <script>
-        var droptarget = document.querySelector("#box1");
-        var droptarget1 = document.querySelector("#box2");
         var droptarget2 = document.querySelector("#box3");
-        var droptarget3 = document.querySelector("#box4");
         var draggabel = document.querySelectorAll(".task");
-        // console.log(draggabel);
+        var loadFile1 = function (event) {
+                var image = document.getElementById('task5');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file1").style.display="none"
+        };
+        var loadFile2 = function (event) {
+                var image = document.getElementById('task6');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file2").style.display = "none"
+        };
+        var loadFile3 = function (event) {
+                var image = document.getElementById('task7');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file3").style.display = "none"
+        };
         for (let i = 0; i < draggabel.length; i++) {
             draggabel[i].addEventListener("dragstart", function (ev) {
                 ev.dataTransfer.setData("srcId", ev.target.id);
             })
         }
-
-        droptarget.addEventListener("dragover", function (ev) {
-            ev.preventDefault();
-        });
-
-        droptarget1.addEventListener("dragover", function (ev) {
-            ev.preventDefault();
-        });
-
         droptarget2.addEventListener("dragover", function (ev) {
             ev.preventDefault();
         });
-        droptarget3.addEventListener("dragover", function (ev) {
-            ev.preventDefault();
-        });
         
-
-        droptarget.addEventListener("drop", function (ev) {
-            ev.preventDefault();
-            let target = ev.target;
-            let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == 'task1') {
-                target.appendChild(document.getElementById(srcId));
-            }else{
-                alert("Wrong Move")
-            }
-        });
-
-        droptarget1.addEventListener("drop", function (ev) {
-            ev.preventDefault();
-            let target = ev.target;
-            let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == "task2") {
-                target.appendChild(document.getElementById(srcId));
-            } else {
-                alert("Wrong Move")
-            }
-        });
         droptarget2.addEventListener("drop", function (ev) {
             ev.preventDefault();
             let target = ev.target;
             let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == "task3") {
-                target.appendChild(document.getElementById(srcId));
-            } else {
-                alert("Wrong Move")
+            target.appendChild(document.getElementById(srcId));
+            if(srcId==="task3"){
+                swal("Good job!", "You chose the corrrect option!", "success");
+            }else{
+                swal("Wrong Move!", "You chose the wrong option!", "warning");
+                
             }
-        });
-        droptarget3.addEventListener("drop", function (ev) {
-            ev.preventDefault();
-            let target = ev.target;
-            let srcId = ev.dataTransfer.getData("srcId");
-            if (srcId == 'task4') {
-                target.appendChild(document.getElementById(srcId));
-            } else {
-                alert("Wrong Move")
-            }
-        });
+        })
+        
     </script>
 </body>
 
