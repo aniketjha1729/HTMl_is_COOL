@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        body {
+            margin: 10px;
+        }
+        
+        .box{
+            display: flex;
+        }
+        img{
+            width: 228px !important;
+            height: 200px;
+        }
+
+        .task {
+            background-color: pink;
+            color: black;
+            /* padding: 5px; */
+            border: 1px solid rgb(211, 9, 9);
+            /* margin:4px ; */
+            width: 100%;
+        }
+
+        .row {
+            
+            color: #fff;
+            /* border: 1px solid red; */
+            font-size: 150%;
+            padding-top:0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            
+
+        }
+
+        .col-4 {
+            border: 1px solid rebeccapurple;
+            height: 200px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6">
+            <div class="box">
+                <img src="row-2-col-1(1).jpg" alt="" srcset="" id="task1" class="task" draggable="true">
+                <img src="row-2-col-1(2).jpg" alt="" srcset="" id="task2" class="task" draggable="true">
+            </div>
+            <div class="box">
+                <img src="row-2-col-1.jpg" alt="" srcset="" id="task3" class="task" draggable="true">
+                <img src="row-2-col-1(5).jpg" alt="" srcset="" id="task4" class="task" draggable="true">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4" id="box1">
+                    <input type="file" accept="image/*" name="image" id="file1" onchange="loadFile1(event)">
+                    <img alt="" srcset="" id="task5" class="task" draggable="true">
+                </div>
+                <div class="col-4" id="box2">
+                    <input type="file" accept="image/*" name="image" id="file2" onchange="loadFile2(event)">
+                    <img  alt="" srcset="" id="task6" class="task" draggable="true">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4" id="box3"></div>
+                <div class="col-4" id="box4">
+                    <input type="file" accept="image/*" name="image" id="file3" onchange="loadFile3(event)">
+                    <img  alt="" srcset="" id="task7" class="task" draggable="true">
+                </div>
+            </div>
+        </div>
+    <div>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var droptarget2 = document.querySelector("#box3");
+        var draggabel = document.querySelectorAll(".task");
+        var loadFile1 = function (event) {
+                var image = document.getElementById('task5');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file1").style.display="none"
+        };
+        var loadFile2 = function (event) {
+                var image = document.getElementById('task6');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file2").style.display = "none"
+        };
+        var loadFile3 = function (event) {
+                var image = document.getElementById('task7');
+                image.src = URL.createObjectURL(event.target.files[0])
+                document.getElementById("file3").style.display = "none"
+        };
+        for (let i = 0; i < draggabel.length; i++) {
+            draggabel[i].addEventListener("dragstart", function (ev) {
+                ev.dataTransfer.setData("srcId", ev.target.id);
+            })
+        }
+        droptarget2.addEventListener("dragover", function (ev) {
+            ev.preventDefault();
+        });
+        
+        droptarget2.addEventListener("drop", function (ev) {
+            ev.preventDefault();
+            let target = ev.target;
+            let srcId = ev.dataTransfer.getData("srcId");
+            target.appendChild(document.getElementById(srcId));
+            if(srcId==="task3"){
+                swal("Good job!", "You chose the corrrect option!", "success");
+            }else{
+                swal("Wrong Move!", "You chose the wrong option!", "warning");
+                
+            }
+        })
+        
+    </script>
+</body>
+
+</html>
